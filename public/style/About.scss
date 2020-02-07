@@ -1,0 +1,257 @@
+// tablet and smaller monitors/laptops
+.about_background_image {
+    display: flex;
+    font-family: 'Bangers', cursive;
+    background: url('../../src/assets/backgroundImages/scroll5.png'), url('../../src/assets/backgroundImages/test1.png');
+    background-position: center, bottom; /* Center the image */
+    background-repeat: no-repeat, no-repeat; /* Do not repeat the image */
+    background-size: 55vw 90vh, cover;
+    border : 15px solid black;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding : 0;
+}
+
+
+
+@media only screen and (max-width: 375px) {
+    .gridAbout {
+        margin: 0;
+        padding : 0;
+        display: grid;
+        grid-template-columns: 100px 1fr 100px;
+        grid-template-rows: 1fr 1fr;
+  
+        grid-template-areas: 
+          'sign_area scroll_area sign_area'
+             
+        ; 
+        width: 100%;
+        height: 100%;
+      }
+  
+      .scroll_area {
+          grid-area: scroll_area;
+          width: 100%;
+          grid-row: 1 / 3;
+          grid-column: 2 / 4;
+
+          .scroll_area_text_wrapper {
+              text-align: center;
+              color: rgb(235, 235, 235) !important;
+              font-size: 3vw;
+              letter-spacing: 0.2rem;
+            }
+
+          
+      }     
+      
+      .sign_area_home {
+          grid-area: sign_area_home;
+          width: 100%;
+          grid-column: 4 / 5;
+          grid-row: 2 / 3;
+          display: block;
+          text-align: end;
+      }
+      .sign_area_work {
+          grid-area: sign_area_work;
+          width: 100%;
+          grid-column: 1 / 2;
+          grid-row: 2 / 3;
+          display: block;
+        
+      }
+  
+      .sign_img_wrapper a img {
+        width: 50%;
+  
+    }
+      
+  
+
+}
+
+@media only screen and (min-width: 375px) {
+    .gridAbout {
+        margin: 0;
+        padding : 0;
+        display: grid;
+        grid-template-columns: 100px 1fr 1fr 100px;
+        grid-template-rows: 1fr 1fr;
+  
+        grid-template-areas: 
+          'sign_area scroll_area sign_area'
+             
+        ; 
+        width: 100%;
+        height: 100%;
+      }
+  
+      .scroll_area {
+          grid-area: scroll_area;
+      
+          grid-row: 1 / 3;
+            grid-column: 2 / 4;
+
+          .scroll_area_text_wrapper {
+            width: 65%;
+            margin: 0 auto;
+            padding-top: 6rem;
+            text-align: center;
+            color: rgb(235, 235, 235) !important;
+            font-size: 3.5vw;
+            letter-spacing: 0.2rem;
+        
+            }
+
+          
+      }     
+      
+      .sign_area_home {
+          grid-area: sign_area_home;
+          width: 100%;
+          grid-column: 4 / 5;
+          grid-row: 2 / 3;
+          display: block;
+          text-align: end;
+      }
+      .sign_area_work {
+          grid-area: sign_area_work;
+          width: 100%;
+          grid-column: 1 / 2;
+          grid-row: 2 / 3;
+          display: block;
+        
+      }
+      .sign_img_wrapper a img {
+        width: 70%;
+  
+    }
+      
+
+
+}
+
+@media (min-width: 768px) {
+    
+      .scroll_area {
+        grid-area: scroll_area;
+        grid-row: 1 / 3;
+        grid-column: 2 / 4;
+
+        .scroll_area_text_wrapper {
+        width: 48%;
+        margin: 0 auto;
+        padding-top: 10rem;
+        text-shadow: $main-text-shadow;
+        }   
+      }     
+       
+      .sign_img_wrapper {
+          width: 100%;
+          height: 100%;
+      }
+      .sign_img_wrapper a img {
+        width: 100%;
+  
+    }
+      
+}
+
+@media (min-width: 992px) {
+    .gridAbout {
+      
+        grid-template-columns: 250px 1fr 1fr 250px;
+        grid-template-rows: 1fr 35%;
+        
+      }
+  
+      .scroll_area {
+          grid-area: scroll_area;
+          grid-row: 1 / 3;
+          grid-column: 2 / 4;
+
+          .scroll_area_text_wrapper {
+            width: 65%;
+            margin: 0 auto;
+       
+            text-align: center;
+            color: rgb(235, 235, 235) !important;
+            text-shadow: $main-text-shadow;
+            font-size: 3vw;
+            letter-spacing: 0.1rem;
+            }         
+      }     
+      
+      .sign_area_home         {   padding-right: 0;   }
+      .sign_area_work         {   padding-right: 0;   }
+      .sign_img_wrapper a img {   width: 70%;            }
+      
+
+}
+
+@media (min-width: 1200px) {
+
+    .gridAbout {
+      display: grid;
+      grid-template-columns: 250px 1fr 1fr 1fr 350px;
+      grid-template-rows: 1fr 1fr;
+
+      grid-template-areas: 
+        'sign_area scroll_area scroll_area sign_area'
+
+            
+      ; 
+      width: 100%;
+      height: 100%;
+    }
+ 
+    
+
+
+    .scroll_area {
+    
+        grid-area: scroll_area;
+        grid-row: 1 / 3;
+        grid-column: 1 / 6;
+        text-shadow: $main-text-shadow;
+
+        .scroll_area_text_wrapper {
+            font-size: 2.5vw;
+            width: 30%;
+            margin: 0 auto;
+  
+          }
+        
+    }
+  
+    .sign_area_home {
+        grid-area: sign_area_home;
+        width: 100%;
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        padding: 0 !important;
+    }
+    .sign_area_work {
+        grid-area: sign_area_work;
+        width: 100%;
+        grid-column: 5 / 6;
+        grid-row: 2 / 3;
+    }
+
+    
+}
+  
+
+@media (min-width: 1600px) {
+    .scroll_area_text_wrapper {
+        font-size: 2vw !important;
+        width: 40%;
+        margin: 0 auto;
+
+      }
+
+
+ }
