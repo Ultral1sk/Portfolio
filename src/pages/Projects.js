@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom'
 
 
 
-import table1 from '../assets/ProjectPageAssets/table1.png'
 
 
 

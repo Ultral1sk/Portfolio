@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import SocialMedia from '../component/SocialMedia'
-import husband from '../assets/carouselImg/husband.jpg'
-import learner from '../assets/carouselImg/learner.jpg'
-import gamer from '../assets/carouselImg/gamer.jpg'
+
+
 import reactImg from '../assets/logos/react1.png'
 import javasScriptImg from '../assets/logos/javascript.png'
 import css from '../assets/logos/css.png'
