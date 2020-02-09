@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+
 import SocialMedia from '../component/SocialMedia'
 
 
@@ -12,11 +13,10 @@ import jQuery from '../assets/logos/jquery.png'
 import nodejs from '../assets/logos/node1.png'
 import redux from '../assets/logos/redux.png'
 
-import sketch from '../assets/ProjectPageAssets/joker1.png'
-import sign from '../assets/cartoonImages/sign1.png'
-
-import sign2 from '../assets/cartoonImages/sign2.png'
-
+import signRight from '../assets/cartoonImages/signRight.png'
+import signLeft from '../assets/cartoonImages/signLeft.png'
+import signArrowLeft from '../assets/cartoonImages/arrowLeft.png'
+import signArrowRight from '../assets/cartoonImages/arrowRight.png'
 import Typist from 'react-typist';
 import MyComponent from '../component/ReusableUi/misc'
 import { SignTag, MobileSignTag } from '../component/ReusableUi/SignTag'
@@ -64,36 +64,45 @@ export class About extends Component {
 
         return (
             <>
-            <div className="about_background_image">
-                <div className="gridAbout">
-                    <div className="sign_area_home" >
-                    {
-                        isDesktop ? 
-                        <MobileSignTag link="/"/>
-                                  : 
-                        <SignTag text="blabla" link="/"> home </SignTag>   
-                    }
+     
+                <div className="about_background_image">
+                    <div className="gridAbout">
+                        <div className="sign_area_home" >
+                        {
+                            isDesktop ? 
+                            <MobileSignTag link="/projects" imgUrl={signArrowRight} />
+                                    : 
+                            <SignTag bck={signLeft} link="/" padding="0 5rem 9rem 0" rotate="rotate(15deg)"> home </SignTag>   
+                        }
 
-                      
-                    </div>
-                    <div className="scroll_area">
-                        <div className="scroll_area_text_wrapper">
-                            <MyComponent/>          
-                        </div>      
-                    </div>        
-                    <div className="sign_area_work">       
-                    {
-                        isDesktop ? 
-                        <MobileSignTag link="/projects" />
-                                  : 
-                        <span className="arrow_sign_rotator">
-                            <SignTag text="blabla" link="/projects"> mywork </SignTag>   
-                        </span>
-                    }            
+                        
+                        </div>
+                    
+                        <div className="scroll_area">
+                            <div className="scroll_area_text_wrapper">
+                                <MyComponent/>          
+                            </div>      
+                        </div>   
+                 
+                        <div className="sign_area_work">       
+                        {
+                            isDesktop ? 
+                            <MobileSignTag link="/" imgUrl={signArrowLeft}/>
+                                    : 
+                            <span className="arrow_sign_rotator">
+                                <SignTag 
+                                    padding="0 0 9rem 4.5rem"  
+                                    bck={signRight} 
+                                    link="/projects"
+                                    rotate="rotate(-15deg)"
+                                >   mywork
+                                </SignTag>   
+                            </span>
+                        }            
+                        </div>
                     </div>
                 </div>
-            </div>
-          
+        
             </>
         )
     }

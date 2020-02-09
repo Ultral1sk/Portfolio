@@ -1,32 +1,12 @@
 import React, { Component } from 'react'
 import jovan from '../assets/ProjectPageAssets/joker1.png'
-import sign from '../../src/assets/cartoonImages/sign1.png'
-
+import signRight from '../../src/assets/cartoonImages/signRight.png'
 import { SignTag } from '../component/ReusableUi/SignTag'
 
 
-import { Link } from 'react-router-dom'
 export class Home extends Component {
 
-    constructor(props) {
-        super(props)
-    
-        this.state = {
-            mouseOver : false,
-      
-        }
-    }
-
-    mouseOver = () => {
-        this.setState(state => ({
-            mouseOver : !state.mouseOver
-        }))
-        console.log('rendering')
-        
-    }
-
-
-    
+ 
       
     render() {
         console.log(this.props);
@@ -55,7 +35,10 @@ export class Home extends Component {
                 <div className="header">
                     <div className="avatar_wrapper">
                         <div className="avatar_inner_wrapper">
+                    
                             <div className="item">  
+                     
+                      
                                 <div className="previews">
                                     <div id="preview-home" className="preview-image" >
                                         <a className="homeLink"  href="/">Home</a>
@@ -69,19 +52,20 @@ export class Home extends Component {
                                     <div id="preview-contact" className="preview-image">
                                         <a className="contactLink" href="/contact">Contact</a>
                                     </div>
-                                    <div id="preview-greetings" className="preview-image">
-                                        <a className="greetingsLink" href="https://www.hltv.org/">Hello</a>
-                                    </div>
+                                    <div id="preview-greetings" className="preview-image">                                           
+                                            <a className="greetingsLink" href="https://www.hltv.org/">Hello</a>                    
+                                    </div>                                       
                                 </div>
+                       
                                 <div className="content">
                                     <img src={jovan} height="100%" width="35%" />
                                 </div>
-                            </div>
-                        </div>
+                            </div>    
+                        </div>     
                     </div>
                 </div>
                 <div className="sidebar">
-                    <SignTag link='/about'>
+                    <SignTag link='/about' bck={signRight}  padding="1rem 0 9rem 4rem" rotate="rotate(-15deg)" >
                         About
                     </SignTag>
                 </div>
