@@ -1,5 +1,5 @@
 import React, { Component }      from 'react';
-import ProjectTemplateItem       from '../component/ProjectTemplateItem';
+import ProjectTemplateItem       from '../component/projectUI/ProjectTemplateItem';
 import {SignTag} from '../component/ReusableUi/SignTag'
 import { Link } from 'react-router-dom'
 import projectOne from '../assets/ProjectPageAssets/imageedit_266_6972894412.png'

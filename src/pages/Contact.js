@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import WrappedMap from '../component/GoogleMap'
+import WrappedMap from '.././component/google/GoogleMapStyles'
 import SocialMedia from '../component/SocialMedia'
 const REACT_APP_GOOGLE_KEY ="AIzaSyBiInmwY2fppFieFCVoDMxn9KLso0pJ6Cs"
 

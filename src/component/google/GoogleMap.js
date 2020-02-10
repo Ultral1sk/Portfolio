@@ -1,6 +1,6 @@
 import React from 'react';
 import { GoogleMap, withScriptjs, withGoogleMap } from 'react-google-maps';
-import GoogleMapStyles from '../component/GoogleMapStyles'
+import GoogleMapStyles from '../google/GoogleMapStyles'
 
 
 

@@ -1,5 +1,6 @@
 import React, {Component, Children} from 'react';
 import Typist from 'react-typist';
+import Rotate from 'react-reveal/Rotate';
 
 const TypistStyles = {
  color: 'rgb(248, 79, 107)'
@@ -18,6 +19,7 @@ export default class MyComponent extends Component {
  
   render() {
     return (
+
       <Typist avgTypingDelay={30}>
         <div style={{...TypistWidth}}>
           <h2 className="about" >About</h2>
@@ -30,6 +32,7 @@ export default class MyComponent extends Component {
         </div>
   
       </Typist>
+ 
     );
   }
 }

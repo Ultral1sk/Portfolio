@@ -1,9 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import Flash from 'react-reveal/Flash';
-
-import SocialMedia from '../component/SocialMedia'
-
 
 import reactImg from '../assets/logos/react1.png'
 import javasScriptImg from '../assets/logos/javascript.png'
@@ -18,12 +14,8 @@ import signRight from '../assets/cartoonImages/signRight.png'
 import signLeft from '../assets/cartoonImages/signLeft.png'
 import signArrowLeft from '../assets/cartoonImages/arrowLeft.png'
 import signArrowRight from '../assets/cartoonImages/arrowRight.png'
-import Typist from 'react-typist';
-import MyComponent from '../component/ReusableUi/misc'
+import MyComponent from '../component/aboutUI/TypeWriterUI'
 import { SignTag, MobileSignTag } from '../component/ReusableUi/SignTag'
-
-
-
 
 
 export class About extends Component {
@@ -82,13 +74,13 @@ export class About extends Component {
 
                         
                         </div>
-                    
+                     
                         <div className="scroll_area">
                             <div className="scroll_area_text_wrapper">
                                 <MyComponent/>          
                             </div>      
                         </div>   
-                 
+                     
                         <div className="sign_area_work">       
                         {
                             isDesktop ? 
