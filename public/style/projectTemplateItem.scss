@@ -4,17 +4,77 @@
   
       font-family: 'Bangers', cursive;
       background: url('../../src/assets/backgroundImages/black.jpg');
-      background-position: bottom; /* Center the image */
+      background-position: center; /* Center the image */
+      background-size: cover;
       background-repeat: no-repeat; /* Do not repeat the image */
       border : 15px solid black;
       width: 100%;
       height: 100vh;
       text-align: center;
       position: relative; 
-      padding: 0;
+      padding: 5rem 5rem;
       margin: 0;
   }
 
+  
+  .ProjectsGrid {
+    display: grid;
+    grid-template-columns: 20px 1fr 1fr 1fr 20px;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 5px;
+    grid-template-areas: 
+    'leftSign projectOneLeft projectMiddle projectThreeRight rightSign'
+    'leftSign projectTwoLeft projectMiddle projectTFourRight rightSign'
+
+    ;
+    width: 100%;
+    height: 100%;
+
+    .leftSign          {   grid-area: leftSign; }
+    .rightSign         {   grid-area: rightSign; }
+    .projectOneLeft    {   grid-area: projectOneLeft; }
+    .projectTwoLeft    {   grid-area: projectTwoLeft; }
+    .projectThreeRight {   grid-area: projectThreeRight; }
+    .projectTFourRight {   grid-area: projectTFourRight; }
+    .projectMiddle     {   grid-area: projectMiddle; 
+   
+      align-self: center;
+      justify-content: center;
+      width: 100%;
+
+    }
+ 
+  }
 
 
+  @media (min-width: 798) {
+    .ProjectsGrid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-gap: 5px;
+      grid-template-areas: 
+      'leftSign projectOneLeft projectMiddle projectThreeRight rightSign'
+
+  
+      ;
+      width: 100%;
+      height: 100%;
+  
+      .leftSign          {   grid-area: leftSign; }
+      .rightSign         {   grid-area: rightSign; }
+      .projectOneLeft    {   grid-area: projectOneLeft; }
+      .projectTwoLeft    {   grid-area: projectTwoLeft; }
+      .projectThreeRight {   grid-area: projectThreeRight; }
+      .projectTFourRight {   grid-area: projectTFourRight; }
+      .projectMiddle     {   grid-area: projectMiddle; 
+     
+        align-self: center;
+        justify-content: center;
+        width: 100%;
+  
+      }
+   
+    }
+  }
 

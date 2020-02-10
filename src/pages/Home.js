@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import jovan from '../assets/ProjectPageAssets/joker1.png'
 import signRight from '../../src/assets/cartoonImages/signRight.png'
 import { SignTag } from '../component/ReusableUi/SignTag'
-
+import Flash from 'react-reveal'
 
 export class Home extends Component {
 
@@ -66,7 +66,7 @@ export class Home extends Component {
                 </div>
                 <div className="sidebar">
                     <SignTag link='/about' bck={signRight}  padding="1rem 0 9rem 4rem" rotate="rotate(-15deg)" >
-                        About
+                        <Flash> About     </Flash> 
                     </SignTag>
                 </div>
               

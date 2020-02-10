@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import Flash from 'react-reveal/Flash';
 
 import SocialMedia from '../component/SocialMedia'
 
@@ -70,9 +71,13 @@ export class About extends Component {
                         <div className="sign_area_home" >
                         {
                             isDesktop ? 
-                            <MobileSignTag link="/projects" imgUrl={signArrowRight} />
+                            <Flash>
+                                <MobileSignTag link="/projects" imgUrl={signArrowRight} />
+                            </Flash>
                                     : 
-                            <SignTag bck={signLeft} link="/" padding="0 5rem 9rem 0" rotate="rotate(15deg)"> home </SignTag>   
+                                  
+                            <SignTag bck={signLeft} link="/" padding="0 5rem 9rem 0" rotate="rotate(15deg)">  <Flash> home     </Flash></SignTag>   
+                                
                         }
 
                         
@@ -87,7 +92,9 @@ export class About extends Component {
                         <div className="sign_area_work">       
                         {
                             isDesktop ? 
-                            <MobileSignTag link="/" imgUrl={signArrowLeft}/>
+                            <Flash infinity>
+                                <MobileSignTag link="/" imgUrl={signArrowLeft}/>    
+                            </Flash>
                                     : 
                             <span className="arrow_sign_rotator">
                                 <SignTag 
@@ -95,7 +102,7 @@ export class About extends Component {
                                     bck={signRight} 
                                     link="/projects"
                                     rotate="rotate(-15deg)"
-                                >   mywork
+                                >   <Flash> Mywork     </Flash>
                                 </SignTag>   
                             </span>
                         }            
