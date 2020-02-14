@@ -37,7 +37,7 @@ export const Title = () => {
         <div className="title">
             <div className="hello_wrapper">
                 <h2>Hello, my name is </h2>  
-                    <h1 className="name_wrapper"> Jovan Derebanoski </h1>       
+                    <h1 className="name_wrapper"> Jovan Derebanoski. </h1>       
                 <h2>I'm a 
                     <span className="name_wrapper">&nbsp;
                         Developer
@@ -47,7 +47,7 @@ export const Title = () => {
                         Germany
                     </span>
                 </h2>
-                <h2>I build things on the Internet</h2>
+                <h2>and I build things on the Internet</h2>
             </div>
         </div>
     )

@@ -11,38 +11,36 @@ const ProjectTemplateItem = (props) => {
      
 
        const SignTagStyles = {
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  height: "40vh",
-                  background: `url(${props.bck})`,
-                  backgroundPosition: 'center', /* Center the image */
-                  backgroundRepeat: 'no-repeat', /* Do not repeat the image */
-                  backgroundSize: "100% 100%",
-                  padding : props.padding,  
-                  border: props.border,
-                  borderRadius : props.radius,
-        
-                 
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '100%',
+        height: "46vh",
+        background: `url(${props.bck})`,
+        backgroundPosition: 'center', /* Center the image */
+        backgroundRepeat: 'no-repeat', /* Do not repeat the image */
+        backgroundSize: "130% 200%",
+        padding : props.padding,  
+        border: props.border,
+
+
 
               
       }
     
-      const fontStyles = {  transform : props.rotate, color: props.color }
+      const fontStyles = {  transform : props.rotate, color: 'white', fontSize : props.size }
       
-      return   <div className="ProjectTemplate">
-                
-                    <div style={SignTagStyles}>
-                        <Link 
-                            style={{...fontStyles}}
-                            text={props.text} 
-                            to={props.link}>                  
-                            {props.children}
-                        </Link>           
-                    </div>
+      return    <div style={SignTagStyles}>
+                    <Link 
+                        style={{...fontStyles}}
+                        text={props.text} 
+                        to={props.link}>                  
+                        {props.children}
+                    </Link>           
+                </div>
           
 
-              </div>
+          
     
     }
 

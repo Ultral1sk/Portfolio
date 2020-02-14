@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import signRight from '../../src/assets/cartoonImages/signRight.png'
-import { SignTag } from '../component/ReusableUi/SignTag'
-import Flash from 'react-reveal'
+import signRight            from '../../src/assets/cartoonImages/signRight.png'
+import { SignTag }          from '../component/ReusableUi/SignTag'
+import Flash                from 'react-reveal'
 import { Navigation, Title} from '../component/HeaderFooterUi/Navigation'
 
 export class Home extends Component {

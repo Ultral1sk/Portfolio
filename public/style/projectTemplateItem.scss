@@ -1,27 +1,77 @@
 
   
-  .myWorkBackgroundImage {
+
+
+
+
+  @media only screen and (max-width: 792px) {
+    .myWorkBackgroundImage {
   
       font-family: 'Bangers', cursive;
-      background: url('../../src/assets/backgroundImages/black.jpg');
-      background-position: center; /* Center the image */
+      background : url('../../src/assets/backgroundImages/test1.png');
+      background-position: bottom; /* Center the image */
+      background-size: cover;
+      background-repeat: no-repeat; /* Do not repeat the image */
+      border : 15px solid black;
+
+      width: 100%;
+      height: auto;
+      text-align: center;
+      position: relative; 
+      padding: 0 3rem 0 3rem;
+      margin: 0;
+  }
+
+
+    .ProjectsGrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      grid-template-areas: 
+      'leftSign projectMiddle rightSign'
+      ' projectOneLeft projectOneLeft projectOneLeft '   
+      ' projectTwoLeft projectTwoLeft projectTwoLeft ' 
+      ' projectThreeRight projectThreeRight projectThreeRight '
+      ' projectTFourRight projectTFourRight projectTFourRight '
+
+      ;
+      width: 100%;
+      height: 100%;
+      
+    }
+
+    .leftSign          {   grid-area: leftSign;  padding-top: 5rem; }
+    .rightSign         {   grid-area: rightSign; padding-top: 5rem; }
+    .projectOneLeft    {   grid-area: projectOneLeft; }
+    .projectTwoLeft    {   grid-area: projectTwoLeft; }
+    .projectThreeRight {   grid-area: projectThreeRight; }
+    .projectTFourRight {   grid-area: projectTFourRight; }
+    .projectMiddle     {   grid-area: projectMiddle; }
+
+  }
+
+
+
+  @media only screen and (min-width: 792px) {
+    .myWorkBackgroundImage {
+  
+      font-family: 'Bangers', cursive;
+      background : url('../../src/assets/backgroundImages/test1.png');
+      background-position: bottom; /* Center the image */
       background-size: cover;
       background-repeat: no-repeat; /* Do not repeat the image */
       border : 15px solid black;
       width: 100%;
-      height: 100%;
+      height: 100vh;
       text-align: center;
       position: relative; 
-      padding: 5rem 5rem;
+
       margin: 0;
   }
-
-  @media only screen and (min-width: 792px) {
   .ProjectsGrid {
     display: grid;
-    grid-template-columns: 20px 1fr 1fr 1fr 20px;
+    grid-template-columns: 150px 1fr 1fr 1fr 150px;
     grid-template-rows: 1fr 1fr;
-    grid-gap: 5px;
     grid-template-areas: 
     'leftSign projectOneLeft projectMiddle projectThreeRight rightSign'
     'leftSign projectTwoLeft projectMiddle projectTFourRight rightSign'
@@ -29,9 +79,10 @@
     ;
     width: 100%;
     height: 100%;
+    text-shadow:  $main-text-shadow;
 
-    .leftSign          {   grid-area: leftSign; }
-    .rightSign         {   grid-area: rightSign; }
+    .leftSign          {   grid-area: leftSign;  grid-row : 2 / 3 }
+    .rightSign         {   grid-area: rightSign; grid-row : 2 / 3  }
     .projectOneLeft    {   grid-area: projectOneLeft; }
     .projectTwoLeft    {   grid-area: projectTwoLeft; }
     .projectThreeRight {   grid-area: projectThreeRight; }
@@ -45,34 +96,5 @@
     }
   }
 }
-
-  @media only screen and (max-width: 792px) {
-
-    .ProjectsGrid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-      grid-gap: 5px;
-      grid-template-areas: 
-      'leftSign projectMiddle rightSign'
-      ' projectOneLeft projectOneLeft projectOneLeft '   
-      ' projectTwoLeft projectTwoLeft projectTwoLeft ' 
-      ' projectThreeRight projectThreeRight projectThreeRight '
-      ' projectTFourRight projectTFourRight projectTFourRight '
-
-      ;
-      width: 100%;
-      height: 100%;
-    }
-
-    .leftSign          {   grid-area: leftSign; }
-    .rightSign         {   grid-area: rightSign; }
-    .projectOneLeft    {   grid-area: projectOneLeft; }
-    .projectTwoLeft    {   grid-area: projectTwoLeft; }
-    .projectThreeRight {   grid-area: projectThreeRight; }
-    .projectTFourRight {   grid-area: projectTFourRight; }
-    .projectMiddle     {   grid-area: projectMiddle; }
-
-  }
 
 

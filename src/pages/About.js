@@ -1,21 +1,21 @@
-import React, { Component } from 'react'
-import Flash from 'react-reveal/Flash';
+import React, { Component }       from 'react'
+import Flash                      from 'react-reveal/Flash';
 
-import reactImg from '../assets/logos/react1.png'
-import javasScriptImg from '../assets/logos/javascript.png'
-import css from '../assets/logos/css.png'
-import gitHub from '../assets/logos/github.png'
-import html from '../assets/logos/html.png'
-import jQuery from '../assets/logos/jquery.png'
-import nodejs from '../assets/logos/node1.png'
-import redux from '../assets/logos/redux.png'
-
-import signRight from '../assets/cartoonImages/signRight.png'
-import signLeft from '../assets/cartoonImages/signLeft.png'
-import signArrowLeft from '../assets/cartoonImages/arrowLeft.png'
-import signArrowRight from '../assets/cartoonImages/arrowRight.png'
-import MyComponent from '../component/aboutUI/TypeWriterUI'
+import signRight                  from '../assets/cartoonImages/signRight.png'
+import signLeft                   from '../assets/cartoonImages/signLeft.png'
+import signArrowLeft              from '../assets/cartoonImages/arrowLeft.png'
+import signArrowRight             from '../assets/cartoonImages/arrowRight.png'
+import MyComponent                from '../component/aboutUI/TypeWriterUI'
 import { SignTag, MobileSignTag } from '../component/ReusableUi/SignTag'
+
+import reactImg                   from '../assets/logos/react1.png'
+import javasScriptImg             from '../assets/logos/javascript.png'
+import css                        from '../assets/logos/css.png'
+import gitHub                     from '../assets/logos/github.png'
+import html                       from '../assets/logos/html.png'
+import jQuery                     from '../assets/logos/jquery.png'
+import nodejs                     from '../assets/logos/node1.png'
+import redux                      from '../assets/logos/redux.png'
 
 
 export class About extends Component {
@@ -57,7 +57,7 @@ export class About extends Component {
 
         return (
             <>
-     
+           
                 <div className="about_background_image">
                     <div className="gridAbout">
                         <div className="sign_area_home" >
@@ -74,13 +74,14 @@ export class About extends Component {
 
                         
                         </div>
-                     
+                   
                         <div className="scroll_area">
                             <div className="scroll_area_text_wrapper">
                                 <MyComponent/>          
                             </div>      
                         </div>   
                      
+                 
                         <div className="sign_area_work">       
                         {
                             isDesktop ? 
