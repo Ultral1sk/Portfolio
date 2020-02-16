@@ -5,9 +5,10 @@ import signRight                  from '../assets/cartoonImages/signRight.png'
 import signLeft                   from '../assets/cartoonImages/signLeft.png'
 import signArrowLeft              from '../assets/cartoonImages/arrowLeft.png'
 import signArrowRight             from '../assets/cartoonImages/arrowRight.png'
-import MyComponent                from '../component/aboutUI/TypeWriterUI'
+import AboutContent               from '../component/aboutUI/AboutContent'
 import { SignTag, MobileSignTag } from '../component/ReusableUi/SignTag'
 
+import scroll from '../assets/backgroundImages/scroll2.png'
 import reactImg                   from '../assets/logos/react1.png'
 import javasScriptImg             from '../assets/logos/javascript.png'
 import css                        from '../assets/logos/css.png'
@@ -64,7 +65,7 @@ export class About extends Component {
                         {
                             isDesktop ? 
                             <Flash>
-                                <MobileSignTag link="/projects" imgUrl={signArrowRight} />
+                                <MobileSignTag link="/projects" imgUrl={signArrowRight}  />
                             </Flash>
                                     : 
                                   
@@ -77,7 +78,7 @@ export class About extends Component {
                    
                         <div className="scroll_area">
                             <div className="scroll_area_text_wrapper">
-                                <MyComponent/>          
+                                <AboutContent bck={scroll}/>          
                             </div>      
                         </div>   
                      

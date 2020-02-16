@@ -4,6 +4,7 @@ import {MobileSignTag}           from '../component/ReusableUi/SignTag'
 import signArrowLeft             from '../assets/cartoonImages/arrowLeft.png'
 import signArrowRight            from '../assets/cartoonImages/arrowRight.png'
 import projectOne                from '../assets/cartoonImages/board3.png'
+
 import Bounce                    from 'react-reveal/Bounce';
 import Flash                     from 'react-reveal/Flash';
 import Zoom                      from 'react-reveal/Zoom';
