@@ -32,7 +32,7 @@ const AboutContent = (props) => {
  
 
     return (
-      <Spin duration={400} count={2} >
+      <Spin duration={300} count={2} >
         <Zoom duration={2000}>
           <div style={{...TypistWidth}}>
             <div className="AboutContentStyles" style={{...TypistTextWidth}}>

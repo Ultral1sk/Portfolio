@@ -9,14 +9,7 @@ import AboutContent               from '../component/aboutUI/AboutContent'
 import { SignTag, MobileSignTag } from '../component/ReusableUi/SignTag'
 
 import scroll from '../assets/backgroundImages/scroll2.png'
-import reactImg                   from '../assets/logos/react1.png'
-import javasScriptImg             from '../assets/logos/javascript.png'
-import css                        from '../assets/logos/css.png'
-import gitHub                     from '../assets/logos/github.png'
-import html                       from '../assets/logos/html.png'
-import jQuery                     from '../assets/logos/jquery.png'
-import nodejs                     from '../assets/logos/node1.png'
-import redux                      from '../assets/logos/redux.png'
+
 
 
 export class About extends Component {
