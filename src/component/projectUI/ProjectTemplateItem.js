@@ -27,8 +27,10 @@ const ProjectTemplateItem = (props) => {
 
               
       }
+
+
     
-      const fontStyles = {  transform : props.rotate, color: 'white', fontSize : props.size }
+      const fontStyles = {  transform : props.rotate, color: 'white', fontSize : props.size,  }
       
       return    <div style={SignTagStyles}>
                     <Link 

@@ -8,9 +8,9 @@ import signArrowRight             from '../assets/cartoonImages/arrowRight.png'
 import ContactContent               from '../component/contactUi/ContactContent'
 import { SignTag, MobileSignTag } from '../component/ReusableUi/SignTag'
 
-import modifiedJovan from '../assets/ProjectPageAssets/modifiedJoker.png'
-import scroll from '../assets/backgroundImages/scroll2.png'
-import react                   from '../assets/logos/react.png'
+import modifiedJovan              from '../assets/ProjectPageAssets/modifiedJoker.png'
+import scroll                     from '../assets/backgroundImages/scroll2.png'
+import react                      from '../assets/logos/react.png'
 import js                         from '../assets/logos/js.png'
 import css                        from '../assets/logos/css.png'
 import gitHub                     from '../assets/logos/git.png'
@@ -82,15 +82,15 @@ export class About extends Component {
                                     <p>Wanted for heavy usage of the following weapons</p>
                                     <div className="icons_wrapper">
                                         <div>
-                                            <img src={react} alt="react_logo" />
-                                            <img src={redux} alt="redux_logo" width="15%"/>
-                                            <img src={js}    alt="javascript_logo" width="15%" />
+                                            <img src={react} alt="react_logo" width="25%"/>
+                                            <img src={redux} alt="redux_logo" width="20%"/>
+                                            <img src={js}    alt="javascript_logo" width="20%" />
                                         </div>
                                         <div>
-                                            <img src={jQuery} alt="react_logo" width="15%"/>
-                                            <img src={html} alt="react_logo" width="15%"/>
-                                            <img src={css} alt="react_logo" width="15%"/>
-                                            <img src={gitHub} alt="react_logo" width="15%"/>
+                                            <img src={jQuery} alt="react_logo" width="20%"/>
+                                            <img src={html} alt="react_logo" width="20%"/>
+                                            <img src={css} alt="react_logo" width="20%"/>
+                                            <img src={gitHub} alt="react_logo" width="20%"/>
                                         </div>  
                                       
                                         </div>
@@ -98,7 +98,7 @@ export class About extends Component {
                                     </div>
                                     <div className="wanted_img_wrapper">
                                             <img src={modifiedJovan} width="100%" />
-                                        </div> 
+                                    </div> 
 
                                 </ContactContent>     
                             </div>      

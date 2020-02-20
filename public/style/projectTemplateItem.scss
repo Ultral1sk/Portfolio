@@ -1,27 +1,26 @@
-
+.myWorkBackgroundImage {
+  
+  font-family: 'Bangers', cursive;
+  background : url('../../src/assets/backgroundImages/test1.png');
+  background-position: bottom; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  border : 15px solid black;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  position: relative; 
+  padding: 0 3rem 0 3rem;
+  margin: 0;
+}
   
 
 
 
 
   @media only screen and (max-width: 792px) {
-    .myWorkBackgroundImage {
-  
-      font-family: 'Bangers', cursive;
-      background : url('../../src/assets/backgroundImages/test1.png');
-      background-position: bottom; /* Center the image */
-      background-size: cover;
-      background-repeat: no-repeat; /* Do not repeat the image */
-      border : 15px solid black;
-      width: 100%;
-      height: auto;
-      text-align: center;
-      position: relative; 
-      padding: 0 3rem 0 3rem;
-      margin: 0;
-  }
-
-
+    .myWorkBackgroundImage { background-size: cover; }
+      
+      
     .ProjectsGrid {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -47,26 +46,14 @@
     .projectTFourRight {   grid-area: projectTFourRight; }
     .projectMiddle     {   grid-area: projectMiddle; }
 
+
   }
 
 
 
   @media only screen and (min-width: 792px) {
-    .myWorkBackgroundImage {
-  
-      font-family: 'Bangers', cursive;
-      background : url('../../src/assets/backgroundImages/test1.png');
-      background-position: bottom; /* Center the image */
-      background-size: cover;
-      background-repeat: no-repeat; /* Do not repeat the image */
-      border : 15px solid black;
-      width: 100vw;
-      height: 100vh;
-      text-align: center;
-      position: relative; 
+    .myWorkBackgroundImage { height: 100vh; }
 
-      margin: 0;
-  }
   .ProjectsGrid {
     display: grid;
     grid-template-columns: 150px 1fr 1fr 1fr 150px;
@@ -79,14 +66,14 @@
     width: 100%;
     height: 100%;
     text-shadow:  $main-text-shadow;
-
-    .leftSign          {   grid-area: leftSign;  grid-row : 2 / 3 }
-    .rightSign         {   grid-area: rightSign; grid-row : 2 / 3  }
-    .projectOneLeft    {   grid-area: projectOneLeft; }
-    .projectTwoLeft    {   grid-area: projectTwoLeft; }
-    .projectThreeRight {   grid-area: projectThreeRight; }
-    .projectTFourRight {   grid-area: projectTFourRight; }
-    .projectMiddle     {   grid-area: projectMiddle; 
+    .sign_img_wrapper div         {   width: 65%;   }
+    .leftSign                     {   grid-area: leftSign;  grid-row : 2 / 3 }
+    .rightSign                    {   grid-area: rightSign; grid-row : 2 / 3  }
+    .projectOneLeft               {   grid-area: projectOneLeft; }
+    .projectTwoLeft               {   grid-area: projectTwoLeft; }
+    .projectThreeRight            {   grid-area: projectThreeRight; }
+    .projectTFourRight            {   grid-area: projectTFourRight; }
+    .projectMiddle                {   grid-area: projectMiddle; 
    
       align-self: center;
       justify-content: center;
