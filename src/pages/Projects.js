@@ -3,9 +3,9 @@ import ProjectTemplateItem       from '../component/projectUI/ProjectTemplateIte
 import {MobileSignTag}           from '../component/ReusableUi/SignTag'
 import signArrowLeft             from '../assets/cartoonImages/arrowLeft.png'
 import signArrowRight            from '../assets/cartoonImages/arrowRight.png'
-import projectOne                from '../assets/cartoonImages/board3.png'
+import projectOne                from '../assets/ProjectPageAssets/target6.png'
 
-import Bounce                    from 'react-reveal/Bounce';
+
 import Flash                     from 'react-reveal/Flash';
 import Zoom                      from 'react-reveal/Zoom';
 
@@ -20,28 +20,28 @@ const Projects = (props) => (
                                 </Flash>
                             </div>
                             <div className="projectOneLeft" radius="0 0 50px 0"> 
-                                <Bounce top delay={500}>
+                                <Zoom clear delay={500}>
                                     <ProjectTemplateItem 
                                         bck={projectOne} 
                                         color="black"
-                                        padding="7rem 0 0 0"
+                                    
                                         >
                                         Lounge Bar       <br />
                                         barabar  Project
                                     </ProjectTemplateItem>
-                                </Bounce>                           
+                                </Zoom>                           
                             </div>
                             <div className="projectTwoLeft">
-                                <Bounce top delay={1000}>
+                                <Zoom clear delay={1000}>
                                     <ProjectTemplateItem 
                                     bck={projectOne}    
                                     color="black"
-                                    padding="7rem 0 0 0"
+                                 
                                     >
                                             Ecommerce       <br />
                                             Shoe Store      <br />
                                     </ProjectTemplateItem>
-                                </Bounce>
+                                </Zoom>
                             </div>
                             <div className="projectMiddle" >
                                 <Zoom clear >
@@ -53,29 +53,29 @@ const Projects = (props) => (
                                 </Zoom>
                             </div>
                             <div className="projectThreeRight">
-                                <Bounce top delay={1500}>
+                                <Zoom clear delay={1500}>
                                     <ProjectTemplateItem 
                                     bck={projectOne}  
 
                                     color="black"
-                                    padding="7rem 0 0 0"
+                            
                                     >
                                     E-sports <br />
                                     Project
                                     </ProjectTemplateItem>
-                                </Bounce>
+                                </Zoom>
                             </div>
                             <div className="projectTFourRight" >
-                                <Bounce top delay={2000}>
+                                <Zoom clear delay={2000}>
                                     <ProjectTemplateItem
                                         bck={projectOne}   
                                         color="black"
-                                        padding="7rem 0 0 0"
+                                
                                         >
                                         ongoing <br />
                                         project
                                     </ProjectTemplateItem>
-                                </Bounce>
+                                </Zoom>
                             </div>
                             <div className="rightSign" > 
                                 <Flash>

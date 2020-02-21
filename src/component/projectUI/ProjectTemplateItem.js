@@ -19,7 +19,7 @@ const ProjectTemplateItem = (props) => {
         background: `url(${props.bck})`,
         backgroundPosition: 'center', /* Center the image */
         backgroundRepeat: 'no-repeat', /* Do not repeat the image */
-        backgroundSize: "130% 200%",
+        backgroundSize: "100% 100%",
         padding : props.padding,  
         border: props.border,
 

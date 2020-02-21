@@ -90,7 +90,7 @@ export class About extends Component {
                                             <img src={jQuery} alt="react_logo" width="20%"/>
                                             <img src={html} alt="react_logo" width="20%"/>
                                             <img src={css} alt="react_logo" width="20%"/>
-                                            <img src={gitHub} alt="react_logo" width="20%"/>
+                                 
                                         </div>  
                                       
                                         </div>
@@ -106,7 +106,16 @@ export class About extends Component {
                    
                         <div className="contact_form_scroll_area">
                             <div className="contact_form_scroll_area_text_wrapper">
-                                <ContactContent bck={scroll} delay={2000} duration={300} title="REPORT"/>          
+                                <ContactContent 
+                                    bck={scroll} 
+                                    delay={2000} 
+                                    duration={300} 
+                                    title="REPORT"
+                                >
+                                <input className="input_styles" type="text" placeholder="name" />
+                                <input className="input_styles" type="email" placeholder="email" />
+                                <textarea placeholder="Contact / Comment"></textarea>
+                                </ContactContent>          
                             </div>      
                         </div>   
                      
