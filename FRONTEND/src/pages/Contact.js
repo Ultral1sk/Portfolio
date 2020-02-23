@@ -17,7 +17,7 @@ import gitHub                     from '../assets/logos/git.png'
 import html                       from '../assets/logos/html.png'
 import jQuery                     from '../assets/logos/jquery.png'
 import redux                      from '../assets/logos/redux.png'
-
+import axios                      from 'axios'
 
 export class About extends Component {
     constructor(props) {
@@ -25,7 +25,9 @@ export class About extends Component {
     
         this.state = {
             isDesktop: false, //This is where I am having problems
-            onHover : false
+            name : '',
+            email : '',
+            message : ''
           };
     
     }
@@ -41,6 +43,24 @@ export class About extends Component {
     updatePredicate = () => {
         this.setState({ isDesktop: window.innerWidth < 992 });
       }
+
+
+    changeHandler = (e) => {
+        e.preventDefault();
+        this.setState({[e.target.name] : e.target.value})
+    }
+
+    //talking to the backend through axios
+    submitHandler = async (e) => {
+        e.preventDefault()
+        const { email, name, message} = this.state
+
+        const form = await axios.post('/api/form', {
+            name,
+            email,
+            message
+        });
+    }
 
 
 
@@ -67,9 +87,7 @@ export class About extends Component {
                                   
                             <SignTag bck={signLeft} link="/projects" padding="0 5rem 9rem 0" rotate="rotate(15deg)">  <Flash> Work     </Flash></SignTag>   
                                 
-                        }
-
-                        
+                        }          
                         </div>
                         <div className="contact_wanted_scroll_area">
                             <div className="contact_wanted_scroll_area_text_wrapper">
@@ -78,23 +96,21 @@ export class About extends Component {
                                     title='Wanted' 
                                     duration={300}>
                                     <div className="wanted_text_wrapper">
-                                    <p>Armed and Dangerous</p>
-                                    <p>Wanted for heavy usage of the following weapons</p>
-                                    <div className="icons_wrapper">
-                                        <div>
-                                            <img src={react} alt="react_logo" width="25%"/>
-                                            <img src={redux} alt="redux_logo" width="20%"/>
-                                            <img src={js}    alt="javascript_logo" width="20%" />
-                                        </div>
-                                        <div>
-                                            <img src={jQuery} alt="react_logo" width="20%"/>
-                                            <img src={html} alt="react_logo" width="20%"/>
-                                            <img src={css} alt="react_logo" width="20%"/>
-                                 
-                                        </div>  
-                                      
-                                        </div>
-                                       
+                                        <p>Armed and Dangerous</p>
+                                        <p>Wanted for heavy usage of the following weapons</p>
+                                            <div className="icons_wrapper">
+                                                <div>
+                                                    <img src={react} alt="react_logo" width="25%"/>
+                                                    <img src={redux} alt="redux_logo" width="20%"/>
+                                                    <img src={js}    alt="javascript_logo" width="20%" />
+                                                </div>
+                                                    <div>
+                                                        <img src={jQuery} alt="react_logo" width="20%"/>
+                                                        <img src={html} alt="react_logo" width="20%"/>
+                                                        <img src={css} alt="react_logo" width="20%"/>
+                                            
+                                                    </div>     
+                                            </div>                    
                                     </div>
                                     <div className="wanted_img_wrapper">
                                             <img src={modifiedJovan} width="100%" />
@@ -112,9 +128,31 @@ export class About extends Component {
                                     duration={300} 
                                     title="REPORT"
                                 >
-                                <input className="input_styles" type="text" placeholder="name" />
-                                <input className="input_styles" type="email" placeholder="email" />
-                                <textarea placeholder="Contact / Comment"></textarea>
+                                <form>
+                                    <input 
+                                        onChange={this.changeHandler} 
+                                        className="input_styles" 
+                                        type="text"
+                                        name="name" 
+                                        value={this.state.name}
+                                        placeholder="name" />
+                                    <input 
+                                        onChange={this.changeHandler} 
+                                        className="input_styles" 
+                                        type="email" 
+                                        name="email" 
+                                        value={this.state.email}
+                                        placeholder="email" />
+                                    <textarea  
+                                        onChange={this.changeHandler} 
+                                        value={this.state.message}
+                                        placeholder="Contact / Comment" 
+                                        type="text">
+                                    </textarea> 
+                                    <br />
+                                    <button type="submit">Submit</button>
+                                </form>
+                                
                                 </ContactContent>          
                             </div>      
                         </div>   

@@ -41,8 +41,9 @@ const ProjectIndex = () => {
                                             Shoe Store      <br />
                                     </ProjectTemplateItem>
                                 </Zoom>
-                            </div>
+                            </div>z
                             <div className="projectMiddle" >
+                            
                                 <Zoom clear >
                                     <ProjectTemplateItem color="white" size="3vw">
                                         Jovan's Work Record. <br />

@@ -1,46 +1,25 @@
 {
-  "name": "my_app",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.4.0",
-    "@testing-library/user-event": "^7.2.1",
-    "node-sass": "^4.13.0",
-    "react": "^16.12.0",
-    "react-arc-text": "^1.0.5",
-    "react-dom": "^16.12.0",
-    "react-google-maps": "^9.4.5",
-    "react-reveal": "^1.2.2",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.3.0",
-    "react-typing-effect": "^2.0.3",
-    "react-typist": "^2.0.5",
-    "reactstrap": "^8.2.0"
-  },
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "BACKEND" : "npm start --prefix BACKEND",
+    "FRONTEND" : "npm start --prefix FRONTEND",
+    "dev" : "concurrently \"npm run BACKEND\" \"npm run FRONTEND\""
+
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ultral1sk/Portfolio.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ultral1sk/Portfolio/issues"
   },
-  "devDependencies": {
-    "env-cmd": "^10.0.1",
-    "react-app-env": "^1.2.3"
+  "homepage": "https://github.com/Ultral1sk/Portfolio#readme",
+  "dependencies": {
+    "concurrently": "^5.1.0"
   }
 }

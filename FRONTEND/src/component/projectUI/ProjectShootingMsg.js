@@ -10,9 +10,9 @@ const ProjectShootingMsg = () => {
       }
 
       return (
-            <div>
-                  yoyoyoyo
-            </div>
+            <span>
+                  {props.children}
+            </span>
       )
 }
 

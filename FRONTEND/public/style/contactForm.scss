@@ -349,38 +349,51 @@
 
 
 
-
-
-  .input_styles {
-      text-align: start;
+  form {
+      height: 45%;
+ 
+    .input_styles {
+        text-align: start;
+        background-color: transparent;
+        border: none;
+        border-bottom: 0.5px dotted rgb(31, 31, 31);;
+        border-radius: 30%;
+        outline: none;
+        text-shadow: 2px 2px 2px  rgb(240, 240, 240);
+        margin-top: 3rem;
+      
+    }
+  
+    > button {
+        background-color: transparent;
+        border: none;
+        border-top: 0.5px double rgb(31, 31, 31);
+        border-bottom: 0.5px double rgb(31, 31, 31);
+        border-radius: 45%;
+        color: rgb(31, 31, 31);;
+        text-shadow: 2px 2px 2px  rgb(240, 240, 240);
+    }
+  
+    ::placeholder {
+      color: rgb(31, 31, 31);;
+      text-shadow: 2px 2px 2px  rgb(240, 240, 240);
+  }
+    textarea {
       background-color: transparent;
       border: none;
-      border-bottom: 0.5px dotted rgb(31, 31, 31);;
-      border-radius: 30%;
+      width: 70%;
+      border-bottom: 0.5px double rgb(31, 31, 31);;
+      border-bottom-left-radius: 50%;
+      border-bottom-right-radius: 50%;
       outline: none;
-      text-shadow: 2px 2px 2px  rgb(240, 240, 240);
       margin-top: 3rem;
-  }
-
-
-  ::placeholder {
-    color: rgb(31, 31, 31);;
-    text-shadow: 2px 2px 2px  rgb(240, 240, 240);
-}
-  textarea {
-    background-color: transparent;
-    border: none;
-    width: 70%;
-
-    border-bottom: 0.5px double rgb(31, 31, 31);;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    outline: none;
-    margin-top: 3rem;
+      height: 75%;
+      text-shadow: 2px 2px 2px  rgb(240, 240, 240);
+    }
   
-    height: 45%;
-    text-shadow: 2px 2px 2px  rgb(240, 240, 240);
   }
+
+
 
 
 
