@@ -4,7 +4,7 @@ import Flash                      from 'react-reveal/Flash';
 
 import signLeft                   from '../assets/cartoonImages/signLeft.png'
 import signArrowLeft              from '../assets/cartoonImages/arrowLeft.png'
-import signArrowRight             from '../assets/cartoonImages/arrowRight.png'
+
 import ContactContent               from '../component/contactUi/ContactContent'
 import { SignTag, MobileSignTag } from '../component/ReusableUi/SignTag'
 
@@ -13,7 +13,6 @@ import scroll                     from '../assets/backgroundImages/scroll2.png'
 import react                      from '../assets/logos/react.png'
 import js                         from '../assets/logos/js.png'
 import css                        from '../assets/logos/css.png'
-import gitHub                     from '../assets/logos/git.png'
 import html                       from '../assets/logos/html.png'
 import jQuery                     from '../assets/logos/jquery.png'
 import redux                      from '../assets/logos/redux.png'
@@ -27,7 +26,9 @@ export class About extends Component {
             isDesktop: false, //This is where I am having problems
             name : '',
             email : '',
-            message : ''
+            message : '',
+            successMessage : false,
+      
           };
     
     }
@@ -55,11 +56,12 @@ export class About extends Component {
         e.preventDefault()
         const { email, name, message} = this.state
 
-        const form = await axios.post('/api/form', {
+        await axios.post('/contact', {
             name,
             email,
             message
         });
+
     }
 
 
@@ -67,7 +69,7 @@ export class About extends Component {
 
     render() {
         const isDesktop = this.state.isDesktop;
-
+        console.log(this.state)
 
         return (
             <>
@@ -105,15 +107,15 @@ export class About extends Component {
                                                     <img src={js}    alt="javascript_logo" width="20%" />
                                                 </div>
                                                     <div>
-                                                        <img src={jQuery} alt="react_logo" width="20%"/>
-                                                        <img src={html} alt="react_logo" width="20%"/>
-                                                        <img src={css} alt="react_logo" width="20%"/>
+                                                        <img src={jQuery} alt="jquery_logo" width="20%"/>
+                                                        <img src={html} alt="html_logo" width="20%"/>
+                                                        <img src={css} alt="css_logo" width="20%"/>
                                             
                                                     </div>     
                                             </div>                    
                                     </div>
                                     <div className="wanted_img_wrapper">
-                                            <img src={modifiedJovan} width="100%" />
+                                            <img src={modifiedJovan} alt="modifiedAvatar" width="100%" />
                                     </div> 
 
                                 </ContactContent>     
@@ -128,7 +130,7 @@ export class About extends Component {
                                     duration={300} 
                                     title="REPORT"
                                 >
-                                <form>
+                                <form onSubmit={this.submitHandler}>
                                     <input 
                                         onChange={this.changeHandler} 
                                         className="input_styles" 
@@ -145,6 +147,8 @@ export class About extends Component {
                                         placeholder="email" />
                                     <textarea  
                                         onChange={this.changeHandler} 
+                                        type="text"
+                                        name="message"
                                         value={this.state.message}
                                         placeholder="Contact / Comment" 
                                         type="text">
@@ -152,13 +156,12 @@ export class About extends Component {
                                     <br />
                                     <button type="submit">Submit</button>
                                 </form>
-                                
-                                </ContactContent>          
-                            </div>      
-                        </div>   
-                     
-                 
-                   
+                              
+                                </ContactContent>   
+                              
+                            </div>     
+                       
+                        </div>                     
                     </div>
                 </div>
         

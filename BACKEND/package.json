@@ -4,15 +4,19 @@
   "description": "BackendPart",
   "main": "app.js",
   "scripts": {
-    "start" : "nodemon app.js"
+    "start": "nodemon app.js"
   },
   "author": "Joker",
   "license": "ISC",
   "dependencies": {
     "body-parser": "*",
     "concurrently": "^5.1.0",
+    "dotenv": "^8.2.0",
     "express": "*",
+    "install": "^0.13.0",
     "nodemailer": "^6.4.3",
-    "nodemon": "*"
+    "nodemailer-mailgun-transport": "^2.0.0",
+    "nodemon": "*",
+    "npm": "^6.14.1"
   }
 }

@@ -25,7 +25,7 @@ export const Navigation = () => {
         </div>
 
         <div className="content">
-            <img src={jovan} height="100%" width="35%" />
+            <img src={jovan} alt="avatar" height="100%" width="35%" />
         </div>
     </div>    
     )

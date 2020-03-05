@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Zoom                         from 'react-reveal/Zoom';
 import Spin                         from 'react-reveal/Spin';
 
@@ -8,11 +8,6 @@ import Spin                         from 'react-reveal/Spin';
 const ContactContent = (props) => {
 
 
-
-  const ContactTypistTextWidth = {
-     width : '50%',
-
-   }
    const ContactTypistWidth = {
     display: 'flex',
     justifyContent: 'start',

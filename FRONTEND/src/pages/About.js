@@ -101,30 +101,5 @@ export class About extends Component {
         )
     }
 }
-
-
-
-
 export default About
 
-{/* <img className="sign_image" src={sign} height="100%" width="20%" />    
-
-                <img className="imgSketch" src={sketch} width="10%" height="20%" />
-    <img src={redux} width="70px" height="70px" /> */}
-
-
-
-
-//     <div className="htmlCssJsJq_wrapper">
-//     <img src={html} width="100%" height="100%" />
-//     <img src={css} width="100%"  height="100%"/>         
-//     <img src={javasScriptImg} width="100%" height="100%" />
-//     <img src={jQuery} width="100%" height="100%"/>
-
-// </div>
-// <div className="reactReduxNodeGit_wrapper">
-//     <img src={reactImg} width="100%" height="100%" />
-//     <img src={redux} width="100%" height="100%"/>
-//     <img src={nodejs} width="100%" height="100%"/>  
-//     <img src={gitHub} width="100%" height="100%"/>
-// </div>   

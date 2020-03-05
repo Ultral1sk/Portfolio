@@ -1,6 +1,5 @@
-import React from 'react'
+import React                     from 'react'
 import ProjectTemplateItem       from '../../component/projectUI/ProjectTemplateItem';
-import ProjectShootingMsg        from './ProjectTemplateItem'
 import {MobileSignTag}           from '../../component/ReusableUi/SignTag'
 import signArrowLeft             from '../../assets/cartoonImages/arrowLeft.png'
 import signArrowRight            from '../../assets/cartoonImages/arrowRight.png'
@@ -41,7 +40,7 @@ const ProjectIndex = () => {
                                             Shoe Store      <br />
                                     </ProjectTemplateItem>
                                 </Zoom>
-                            </div>z
+                            </div>
                             <div className="projectMiddle" >
                             
                                 <Zoom clear >

@@ -6,7 +6,8 @@
   "scripts": {
     "BACKEND" : "npm start --prefix BACKEND",
     "FRONTEND" : "npm start --prefix FRONTEND",
-    "dev" : "concurrently \"npm run BACKEND\" \"npm run FRONTEND\""
+    "dev" : "concurrently \"npm run BACKEND\" \"npm run FRONTEND\"",
+    "build" : "react-scripts build"
 
   },
   "repository": {
