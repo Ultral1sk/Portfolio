@@ -27,8 +27,8 @@ export class About extends Component {
             name : '',
             email : '',
             message : '',
-            successMessage : false,
-      
+            successMessage : '',
+            
           };
     
     }
@@ -56,11 +56,19 @@ export class About extends Component {
         e.preventDefault()
         const { email, name, message} = this.state
 
-        await axios.post('/contact', {
-            name,
-            email,
-            message
-        });
+        if( email, name, message === '') {
+            this.setState({ successMessage : this.state.successMessage = 'complete the report ' })
+            setTimeout(() => this.setState({ successMessage : this.state.successMessage = ''}), 3000);
+            
+
+        } else {
+            await axios.post('/contact', {
+                name,
+                email,
+                message
+            });
+        }
+      
 
     }
 
@@ -73,7 +81,6 @@ export class About extends Component {
 
         return (
             <>
-           
                 <div className="contact_background_image">
                     <div className="gridContact">
                         <div className="contact_sign_area_home" >
@@ -106,18 +113,17 @@ export class About extends Component {
                                                     <img src={redux} alt="redux_logo" width="20%"/>
                                                     <img src={js}    alt="javascript_logo" width="20%" />
                                                 </div>
-                                                    <div>
-                                                        <img src={jQuery} alt="jquery_logo" width="20%"/>
-                                                        <img src={html} alt="html_logo" width="20%"/>
-                                                        <img src={css} alt="css_logo" width="20%"/>
-                                            
-                                                    </div>     
+                                                <div>
+                                                    <img src={jQuery} alt="jquery_logo" width="20%"/>
+                                                    <img src={html} alt="html_logo" width="20%"/>
+                                                    <img src={css} alt="css_logo" width="20%"/>
+                                        
+                                                </div>     
                                             </div>                    
                                     </div>
                                     <div className="wanted_img_wrapper">
-                                            <img src={modifiedJovan} alt="modifiedAvatar" width="100%" />
+                                        <img src={modifiedJovan} alt="modifiedAvatar" width="100%" />
                                     </div> 
-
                                 </ContactContent>     
                             </div>      
                         </div>      
@@ -130,6 +136,7 @@ export class About extends Component {
                                     duration={300} 
                                     title="REPORT"
                                 >
+                                {this.state.successMessage}
                                 <form onSubmit={this.submitHandler}>
                                     <input 
                                         onChange={this.changeHandler} 
@@ -155,16 +162,14 @@ export class About extends Component {
                                     </textarea> 
                                     <br />
                                     <button type="submit">Submit</button>
+                                   
                                 </form>
-                              
+                               
                                 </ContactContent>   
-                              
                             </div>     
-                       
                         </div>                     
                     </div>
                 </div>
-        
             </>
         )
     }
