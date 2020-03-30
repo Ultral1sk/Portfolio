@@ -36,13 +36,14 @@ const AboutContent = (props) => {
         <Zoom duration={2000}>
           <div style={{...TypistWidth}}>
             <div className="AboutContentStyles" style={{...TypistTextWidth}}>
-              <h2 className="about" >About</h2>
+              <h2 className="about" style={{fontSize : '3vw', paddingTop: '2rem'}} >About</h2>
                 <p>Hi my name is 
                   <span style={{...TypistStyles}}> Jovan. </span>
-                  i am a<span  style={{...TypistStyles}}> Husband, Developer, Teacher, Gamer</span></p>
-                <p>Specialized in the following areas </p>
-                insterested in the entire frontend and backend spectrum eager to learn and work on
-                abitious projects with positive people
+                  i am a<span  style={{...TypistStyles}}> Husband, Developer, Teacher, Gamer </span> 
+                  with a big sense of<span style={{...TypistStyles}}> humor.</span> 
+                  </p>
+                insterested in the entire frontend and backend spectrum. Always eager to learn and work on
+                abitious projects with positive people.
               </div>
           </div> 
         </Zoom>

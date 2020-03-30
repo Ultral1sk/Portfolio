@@ -16,6 +16,17 @@ import css                        from '../assets/logos/css.png'
 import html                       from '../assets/logos/html.png'
 import jQuery                     from '../assets/logos/jquery.png'
 import redux                      from '../assets/logos/redux.png'
+import bootstrap                       from '../assets/logos/bootstrap.png'
+import mongodb                     from '../assets/logos/mongo.png'
+import express                      from '../assets/logos/express.png'
+import node                      from '../assets/logos/node.png'
+
+import git                      from '../assets/logos/pair/git.png'
+import xing                      from '../assets/logos/pair/xing.png'
+import linked                      from '../assets/logos/pair/linked.png'
+
+
+
 import axios                      from 'axios'
 
 export class About extends Component {
@@ -109,16 +120,22 @@ export class About extends Component {
                                         <p>Wanted for heavy usage of the following weapons</p>
                                             <div className="icons_wrapper">
                                                 <div>
-                                                    <img src={react} alt="react_logo" width="25%"/>
-                                                    <img src={redux} alt="redux_logo" width="20%"/>
-                                                    <img src={js}    alt="javascript_logo" width="20%" />
+                                                    <img src={html}      alt="html_logo" width="20%"/>
+                                                    <img src={css}       alt="css_logo" width="20%"/>
+                                                    <img src={bootstrap} alt="bootstrap" width="15%"/>
+                                                    <img src={js}        alt="javascript_logo" width="20%" />
+                                                    <img src={jQuery}    alt="jquery_logo" width="20%"/>
+
                                                 </div>
                                                 <div>
-                                                    <img src={jQuery} alt="jquery_logo" width="20%"/>
-                                                    <img src={html} alt="html_logo" width="20%"/>
-                                                    <img src={css} alt="css_logo" width="20%"/>
+                                                    <img src={react}     alt="react_logo" width="25%"/>
+                                                    <img src={redux}     alt="redux_logo" width="20%"/>
+                                                    <img src={node}      alt="nodejs_logo" width="20%"/>
+                                                    <img src={express}   alt="express_logo" width="15%"/>
+                                                    <img src={mongodb}   alt="mongodb_logo" width="20%"/>
                                         
                                                 </div>     
+                                           
                                             </div>                    
                                     </div>
                                     <div className="wanted_img_wrapper">
@@ -138,28 +155,45 @@ export class About extends Component {
                                 >
                                 {this.state.successMessage}
                                 <form onSubmit={this.submitHandler}>
-                                    <input 
-                                        onChange={this.changeHandler} 
-                                        className="input_styles" 
-                                        type="text"
-                                        name="name" 
-                                        value={this.state.name}
-                                        placeholder="name" />
-                                    <input 
-                                        onChange={this.changeHandler} 
-                                        className="input_styles" 
-                                        type="email" 
-                                        name="email" 
-                                        value={this.state.email}
-                                        placeholder="email" />
-                                    <textarea  
-                                        onChange={this.changeHandler} 
-                                        type="text"
-                                        name="message"
-                                        value={this.state.message}
-                                        placeholder="Contact / Comment" 
-                                        type="text">
-                                    </textarea> 
+                                    <div style={{ display : 'flex', justifyContent : 'flexStart', alignItems : 'center'}} >
+                                        <a href="https://github.com/Ultral1sk" style={{padding : '3rem 1rem 0 0rem'}}>
+                                            <img src={git} width="50px" />
+                                        </a>
+                                            <input 
+                                                    onChange={this.changeHandler} 
+                                                    className="input_styles" 
+                                                    type="text"
+                                                    name="name" 
+                                                    value={this.state.name}
+                                                    placeholder="name" />
+                                            
+                                    </div>                  
+                                    <div style={{ display : 'flex', justifyContent : 'flexStart', alignItems : 'center'}}>
+                                        <a href="https://www.linkedin.com/in/jovan-derebanoski-7a053b153/" style={{padding : '3rem 1rem 0 0rem'}}>
+                                            <img src={linked} width="50px" />
+                                        </a>   
+                                            <input 
+                                                onChange={this.changeHandler} 
+                                                className="input_styles" 
+                                                type="email" 
+                                                name="email" 
+                                                value={this.state.email}
+                                                placeholder="email" />
+
+                                    </div>      
+                                    <div style={{ display : 'flex', justifyContent : 'flexStart', alignItems : 'center'}}>
+                                        <a href="https://www.xing.com/profile/Jovan_Derebanoski/cv" style={{padding : '1rem 1rem 0 0rem'}}>
+                                            <img src={xing} width="50px" />
+                                        </a>
+                                            <textarea  
+                                                onChange={this.changeHandler} 
+                                                type="text"
+                                                name="message"
+                                                value={this.state.message}
+                                                placeholder="Contact / Comment" 
+                                                type="text">
+                                            </textarea> 
+                                    </div>    
                                     <br />
                                     <button type="submit">Submit</button>
                                    

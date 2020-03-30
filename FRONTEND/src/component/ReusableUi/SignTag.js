@@ -42,6 +42,7 @@ export const MobileSignTag = (props) => {
                   <div>
                         <Link to={props.link}>                  
                               <img src={props.imgUrl} width='25%' />
+                              <p>{props.text}</p>
                         </Link>
                   </div>
               </div>

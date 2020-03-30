@@ -1,6 +1,6 @@
 import React from 'react'
 import jovan from '../../assets/ProjectPageAssets/joker1.png'
-
+import Wobble                from 'react-reveal/Wobble'
 
 
 export const Navigation = () => {
@@ -20,13 +20,18 @@ export const Navigation = () => {
                 <a className="contactLink" href="/contact">Contact</a>
             </div>
             <div id="preview-greetings" className="preview-image">                                           
+            <Wobble duration={3000}>
                     <a className="greetingsLink" href="https://www.hltv.org/">Hello</a>                    
-            </div>                                       
+            </Wobble>                                   
+            </div>    
         </div>
-
+     
         <div className="content">
+        <Wobble duration={3000}>
             <img src={jovan} alt="avatar" height="100%" width="35%" />
+        </Wobble>    
         </div>
+     
     </div>    
     )
 }

@@ -12,10 +12,7 @@
 
 }
 
-
 // mobile device media querry
-
-
 
 
 // tablet and smaller monitors/laptops
@@ -31,21 +28,9 @@
 
   }
 
-  .title {
-    grid-area: title;
-  
-  }
-  .header {
-
-    grid-area: header;
-
-    
-  }
-  .sidebar {
-  
-    grid-area: sidebar;
-    display: none;
-  }
+  .title {  grid-area: title; }
+  .header { grid-area: header; }
+  .sidebar {  grid-area: sidebar;  display: none; }
 
 
   //image width and movement controller 

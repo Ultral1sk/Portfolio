@@ -14,12 +14,13 @@ const ProjectTemplateItem = (props) => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        width: '100%',
-        height: "46vh",
-        background: `url(${props.bck})`,
+        width: '41.2%',
+        height: "23.2vh",
+        backgroundColor: `${props.bck}`,
+        borderRadius : '17%',
         backgroundPosition: 'center', /* Center the image */
         backgroundRepeat: 'no-repeat', /* Do not repeat the image */
-        backgroundSize: "80% 80%",
+ 
         padding : props.padding,  
         border: props.border,
 
@@ -33,12 +34,13 @@ const ProjectTemplateItem = (props) => {
       const fontStyles = {  transform : props.rotate, color: 'white', fontSize : props.size,  }
       
       return    <div style={SignTagStyles}>
-                    <Link 
+                    <a 
                         style={{...fontStyles}}
                         text={props.text} 
-                        to={props.link}>                  
+                      >                  
                         {props.children}
-                    </Link>           
+
+                    </a>           
                 </div>
           
 
