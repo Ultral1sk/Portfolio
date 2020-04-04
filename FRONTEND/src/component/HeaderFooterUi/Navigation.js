@@ -1,27 +1,31 @@
-import React from 'react'
+import React, {useState} from 'react'
 import jovan from '../../assets/ProjectPageAssets/joker1.png'
 import Wobble                from 'react-reveal/Wobble'
-
+import { Link } from 'react-router-dom'
 
 export const Navigation = () => {
+
+    
+        
+       
     return (
         <div className="item">                                       
         <div className="previews">
             <div id="preview-home" className="preview-image" >
-                <a className="homeLink"  href="/">Home</a>
+                <Link className="homeLink"  to="/">Home</Link>
             </div>
             <div  id="preview-about" className="preview-image">
-                <a className="aboutLink" href="/about">About</a>
+                <Link className="aboutLink" to="/about">About</Link>
             </div>
             <div id="preview-work" className="preview-image">
-                <a className="workLink" href="/projects">MYwork</a>
+                <Link className="workLink" to="/projects">MYwork</Link>
             </div>
             <div id="preview-contact" className="preview-image">
-                <a className="contactLink" href="/contact">Contact</a>
+                <Link className="contactLink" to="/contact">Contact</Link>
             </div>
             <div id="preview-greetings" className="preview-image">                                           
             <Wobble duration={3000}>
-                    <a className="greetingsLink" href="https://www.hltv.org/">Hello</a>                    
+                    <Link className="greetingsLink" to="https://www.hltv.org/">Hello</Link>                    
             </Wobble>                                   
             </div>    
         </div>

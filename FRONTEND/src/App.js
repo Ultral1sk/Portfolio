@@ -1,11 +1,11 @@
 import React                    from 'react';
-import { Switch, Route}         from 'react-router-dom';
+import { Switch, Route }         from 'react-router-dom';
 import  Home                    from './pages/Home';
 import  About                   from './pages/About';
 import  Contact                 from './pages/Contact';
 import  Projects                from './pages/Projects';
 import  Error                   from './pages/Error';
-import  Wrapper                 from './pages/Wrapper'
+
 
 import './App.scss'
 

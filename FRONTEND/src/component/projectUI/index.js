@@ -1,41 +1,34 @@
 import React, {useState}                     from 'react'
 import ProjectTemplateItem       from '../../component/projectUI/ProjectTemplateItem';
 import {MobileSignTag}           from '../../component/ReusableUi/SignTag'
-import Carousel, { Dots } from '@brainhubeu/react-carousel';
+import Carousel                     from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
-
-import Fade                     from 'react-reveal/Fade';
+import Sound                     from './RadioSound'
+import Fade                      from 'react-reveal/Fade';
 import Tada                      from 'react-reveal/Tada';
-import Flash                      from 'react-reveal/Flash';
+import Flash                     from 'react-reveal/Flash';
 import Zoom                      from 'react-reveal/Zoom';
 
-const ProjectIndex = () => {
 
+
+
+const ProjectIndex = () => {
     
-    const [state, setstate] = useState(false)
-    const [radioState, setRadio] = useState(false)
-    const [show, showState] = useState('')
-    console.log(state)
-    const radioHandler = () => {
-        setRadio(!radioState)
-    }
-    const tvHandler = () => {
-        setstate(!state)
-        
-    setTimeout(() => {
-        setstate(!state)
-    }, 1000); 
-    }  
+   
+    const [state, setstate]      = useState(false) ;
+    const tvHandler              = () => setstate(!state);
+
       return (
             <div>
                   <div className="projects_wrapper">
                     <div className="ProjectsGrid">      
                             <div className="leftSign"> 
-                                <Flash><MobileSignTag link="/about" text="OUT!"/></Flash>
-                            </div>
-                            <div className="radioButton">
-                            <Tada duration={2000}  forever>
-                                    <button className="turnOnRadioButton" id="toggleButton" onClick={radioHandler}  >{radioState ? 'OFF!' : 'ON!'}</button>
+                                <Flash><MobileSignTag link="/about" text="JUMP!"/></Flash>
+                            </div>      
+
+                            <div className="radioButton">  
+                                <Tada duration={2000}  forever>
+                                    <Sound  />   
                                 </Tada>
                             </div>
        
@@ -75,7 +68,7 @@ const ProjectIndex = () => {
                                                 </ProjectTemplateItem>
                                             </Carousel>   
                                             <div className="questionWrapper" >
-                                                    <h3>I see you sniffin Around Jovan's stuff</h3>
+                                                    <h3>I see you've found Jovan's stuff</h3>
 
                                             </div>   
                                             

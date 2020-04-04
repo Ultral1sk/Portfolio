@@ -9,10 +9,13 @@
   height: 100vh;
   text-align: center;
   position: relative; 
-  
   margin: 0;
- 
+  *:focus {
+    outline: 0 !important;
+  }
 }
+
+
 
 @media only screen and (min-width: 375px) {
   .myWorkBackgroundImage { background-size: cover; }
@@ -34,8 +37,8 @@
 
   .leftSign            {   grid-area: leftSign; grid-row: 3 / 4; padding-top: 3rem;}
   .rightSign           {   grid-area: rightSign; grid-row: 3 / 4; grid-column: 3 / 4; padding-top: 3rem;}
-  .tvButton            {   grid-area: tvButton; grid-column: 2 / 3; grid-row: 2 / 3; }
-  .radioButton         {   grid-area: radioButton; grid-column:  1 / 2; grid-row: 2 / 3; padding: 5.65rem 0 0 2rem}
+  .tvButton            {   grid-area: tvButton; grid-column: 2 / 3; grid-row: 2 / 3;   outline: none;}
+  .radioButton         {   grid-area: radioButton; grid-column:  1 / 2; grid-row: 2 / 3; padding: 3.6rem 0 0 0.5rem;   outline: none;}
   .projectMiddle       {   grid-area: projectMiddle; grid-row: 2 / 3; grid-column: 2 / 3; position: relative; }
 
 
@@ -47,11 +50,14 @@
   .tvCarouselWrapper h2     { font-size: 5.5vw;}
   .linkButton               { width: 20px; height: 20px; ; background : url('../../src/assets/logos/link.png') center center no-repeat; background-size: cover; border : none }
   .questionWrapper          { width : 100% ;margin : 2rem 0 0 2rem; color : white; text-shadow: $mobile-text-shadow;  }
-
+  .radioTxtOff              { color: white; text-shadow: $mobile-text-shadow; opacity : 0;  transition: opacity .25s ease-in-out; font-size: 2vw; }
+  .radioTxtOn               { color: white; text-shadow: $mobile-text-shadow; opacity : 1;  transition: opacity .25s ease-in-out; font-size: 2.5vw; }
+  .radioTxtOff              { font-size: 3vw; }
+  .radioTxtOn               { font-size: 3vw; }
 
   @media only screen and ( min-height : 812px) {
   
-    .radioButton              { padding: 5.3rem 1.3rem 0 0}
+    .radioButton              { padding: 3.9rem 1.3rem 0 0}
     .turnOnTvButton           { top : 45.3%; right: 17.7%; }
     .toggleScreenOn           { width: 132px; height:107px; position: absolute; top: 20%; left: 31.6%; border-radius: 17%; background-color: rgb(29, 29, 29);clip-path: polygon(50% 0%, 94% 0, 100% 45%, 100% 57%, 95% 98%, 50% 100%, 5% 98%, 0 55%, 0 41%, 6% 0);}
     .carousel-outer-controller{ width: 160px;  margin-left: 2rem; h2 { font-size: 7vw;} }
@@ -61,7 +67,7 @@
   }
   @media only screen and ( min-height : 937px) {
   
-    .radioButton              { display: none;}
+    .radioButton              { display: none; }
     .turnOnTvButton           { top : 45.3%; right: 13.3%; }
     .toggleScreenOn           { width: 152px; height:123px; position: absolute; top: 9%; left: 28.9%; border-radius: 17%; background-color: rgb(29, 29, 29);clip-path: polygon(50% 0%, 94% 0, 100% 45%, 100% 57%, 95% 98%, 50% 100%, 5% 98%, 0 55%, 0 41%, 6% 0);}
     .carousel-outer-controller{ width: 160px;  margin-left: 2rem; h2 { font-size: 7vw;} }
@@ -75,22 +81,25 @@
 
 @media only screen and (min-width: 414px) {
 
-  .radioButton              { grid-area: radioButton; grid-column:  1 / 2; grid-row: 2 / 3; padding: 5.5rem 0 0 2.3rem}
+  .radioButton              { grid-area: radioButton; grid-column:  1 / 2; grid-row: 2 / 3; padding: 3.5rem 0 0 1rem}
   .turnOnTvButton           { top : 45%; right: 23.5%; }
   .turnOnRadioButton        { font-size: 2vw; }
   .toggleScreenOn           { width: 119px; height:98px; position: absolute; top: 27%; left: 35.7%; border-radius: 17%; background-color: rgb(29, 29, 29);clip-path: polygon(50% 0%, 94% 0, 100% 45%, 100% 57%, 95% 98%, 50% 100%, 5% 98%, 0 55%, 0 41%, 6% 0);}
   .carousel-outer-controller{ width: 180px;  margin-left: 2.5rem; }
   .linkButton               { margin-bottom: 1rem; }
+  .radioTxtOff              { font-size: 2.5vw; }
+  .radioTxtOn               { font-size: 2.5vw; }
 
   @media only screen and ( min-height : 937px) {
   
-    .radioButton              { display : block; padding: 5rem 1.8rem 0 0;}
+    .radioButton              { display : block; padding: 2.1rem 2rem 0 0;}
     .turnOnTvButton           { top : 45.3%; right: 17%; }
     .toggleScreenOn           { width: 152px; height:123px; position: absolute; top: 9%; left: 32%; border-radius: 17%; background-color: rgb(29, 29, 29);clip-path: polygon(50% 0%, 94% 0, 100% 45%, 100% 57%, 95% 98%, 50% 100%, 5% 98%, 0 55%, 0 41%, 6% 0);}
     .carousel-outer-controller{ width: 165px;  margin-left: 3.5rem; h2 { font-size: 7vw;} }
     .linkButton               { margin-bottom: 5rem; }
     .questionWrapper          { width : 100%; margin : 0rem 0 0 1.5rem; h3 { width: 200px;}  }
-
+    .radioTxtOff              { font-size: 2.5vw; }
+    .radioTxtOn               { font-size: 2.5vw; }
   }
  
 }
@@ -127,27 +136,31 @@
   .questionWrapper          { width : 100% ;margin : 0rem 0 0 2rem; color : white; text-shadow: $mobile-text-shadow;  }
 
   @media only screen and ( min-height : 937px) {
+
   
-    .radioButton              { padding: 5.1rem 0 0 5rem;}
+    .radioButton              { padding: 2.1rem 0 0 5rem;}
     .turnOnTvButton           { top : 45.3%; right: 32.7%; font-size: 1.5vw; }
     .toggleScreenOn           { width: 152px; height:123px; top: 9%; left: 34.8%; }
     .carousel-outer-controller{ width: 170px;  margin-left: 5rem; }
     .tvCarouselWrapper h2     { font-size: 4vw; }
     .linkButton               { margin-bottom: 5rem; }
     .questionWrapper          { margin : 0rem 0 0 2rem;  }
+    .radioTxtOff              { font-size: 2vw; }
+    .radioTxtOn               { font-size: 2vw; }
 
   }
 
   @media only screen and ( min-height : 1024px ) {
   
-    .radioButton              { padding: 4.7rem 0 0 5.5rem;}
+    .radioButton              { padding: 3.2rem 0 0 2.6rem;}
     .turnOnTvButton           { top : 45.5%; right: 31%; font-size: 1.5vw; }
     .toggleScreenOn           { width: 170px; height:136px; top: 1.2%; left: 32.8%; }
     .carousel-outer-controller{ width: 170px;  margin: 0rem 0 0 5rem; }
     .tvCarouselWrapper h2     { font-size: 3vw; }
     .linkButton               { margin-bottom: 6.5rem; }
     .questionWrapper          { margin : 1rem 0 0 2rem; h3 { font-size: 3vw;} }
-
+    .radioTxtOff              { font-size: 2.5vw; }
+    .radioTxtOn               { font-size: 2.5vw; }
   }
 
 
@@ -184,30 +197,43 @@
   .linkButton               { width: 40px; height: 40px; margin-bottom: 6.8rem; ; background : url('../../src/assets/logos/link.png') center center no-repeat; background-size: cover; border : none }
   .questionWrapper          { width : 100% ;margin : 1.5rem 0 0 2.5rem;   h3 { font-size: 4vw; width: 250px;}  }
 
+  @media only screen and ( min-height : 768px) {
+  
+    .radioButton              { padding: 10.1rem 0 0 15.6rem;}
+    .turnOnTvButton           { top : 44.8%; right: 38.7%; font-size: 1vw; }
+    .toggleScreenOn           { width: 140px; height:110px; top: 40.5%; left: 37%; }
+    .carousel-outer-controller{ width: 170px;  margin: 3.7rem 0 0 6.5rem; }
+    .tvCarouselWrapper h2     { font-size: 2.5vw; }
+    .linkButton               { width: 25px; height: 25px; margin-bottom: 0rem; }
+    .questionWrapper          { margin : 3.5rem 0 0 0rem; h3 { font-size: 2.5vw;} }
+
+  }
 
 
   @media only screen and ( min-height : 937px) {
   
-    .radioButton              { padding: 9.8rem 0 0 14rem;}
+    .radioButton              { padding: 5.4rem 0 0 14rem;}
     .turnOnTvButton           { top : 45%; right: 37%; font-size: 1.5vw; }
     .toggleScreenOn           { width: 152px; height:123px; top: 35.4%; left: 37%; }
     .carousel-outer-controller{ width: 170px;  margin: 2rem 0 0 6.5rem; }
     .tvCarouselWrapper h2     { font-size: 3vw; }
     .linkButton               { margin-bottom: 0rem; }
     .questionWrapper          { margin : 3.5rem 0 0 0rem; h3 { font-size: 2.5vw;} }
-
+    .radioTxtOff              { font-size: 1.5vw; }
+    .radioTxtOn               { font-size: 1.5vw; }
   }
 
   @media only screen and ( min-height : 1366px ) {
   
-    .radioButton              { padding: 8.5rem 0 0 3rem;}
+    .radioButton              { padding: 6.1rem 0 0 2.5rem;}
     .turnOnTvButton           { top : 45.5%; right: 31.5%; font-size: 1.5vw; }
     .toggleScreenOn           { width: 226px; height:185px; top: 11.7%; left: 30.5%; }
     .carousel-outer-controller{ width: 170px;  margin: 0rem 0 0 7rem; }
     .tvCarouselWrapper h2     { font-size: 3vw; }
     .linkButton               { margin-bottom:5rem; }
     .questionWrapper          { margin : 3.5rem 0 0 0rem; h3 { font-size: 2.5vw;} }
-
+    .radioTxtOff              { font-size: 2.5vw; }
+    .radioTxtOn               { font-size: 2.5vw; }
   }
  
 }
@@ -238,14 +264,15 @@
 
   @media only screen and ( min-height : 937px) {
   
-    .radioButton              { padding: 9.3rem 0 0 19.2rem; font-size: 1vw;}
+    .radioButton              { padding: 5.3rem 0 0 19.4rem; font-size: 1vw;}
     .turnOnTvButton           { top : 45%; right: 38.8%; font-size: 1.1vw; }
     .toggleScreenOn           { width: 168px; height:138px; top: 29.5%; left: 35.2%; }
     .carousel-outer-controller{ width: 200px;  margin: 2rem 0 0 5.5rem; }
     .tvCarouselWrapper h2     { font-size: 3vw; }
     .linkButton               { width : 25px; height : 25px; margin-bottom: 1.5rem; }
     .questionWrapper          { margin : 3.5rem 0 0 1.5rem; h3 { font-size: 2.5vw;} }
-
+    .radioTxtOff              { font-size: 1.7vw; }
+    .radioTxtOn               { font-size: 1.7vw; }
   }
 
 
@@ -255,14 +282,15 @@
 @media only screen and (min-width: 1360px) {
   @media only screen and ( min-height : 937px) {
   
-    .radioButton              { padding: 9.1rem 0 0 18rem; font-size: 1vw;}
+    .radioButton              { padding: 5.15rem 0 0 21.3rem; font-size: 1vw;}
     .turnOnTvButton           { top : 44.5%; right: 38.8%; font-size: 1.1vw; }
     .toggleScreenOn           { width: 180px; height:145px; top: 26%; left: 34.9%; }
     .carousel-outer-controller{ width: 200px;  margin: 2rem 0 0 6.5rem; }
     .tvCarouselWrapper h2     { font-size: 3vw; }
     .linkButton               { width : 25px; height : 25px; margin-bottom: 1.8rem; }
     .questionWrapper          { margin : 3.5rem 0 0 1.5rem; h3 { font-size: 2.5vw;} }
-
+    .radioTxtOff              {  font-size: 1.5vw; }
+    .radioTxtOn               {  font-size: 1.5vw; }
   } 
 }
 
@@ -270,13 +298,15 @@
 @media only screen and (min-width: 1440px) {
   @media only screen and ( min-height : 937px) {
   
-    .radioButton              { padding: 8.7rem 0 0 22.7rem; font-size: 1vw;}
+    .radioButton              { padding: 6rem 0 0 22.7rem; font-size: 1vw;}
     .turnOnTvButton           { top : 44.2%; right: 38.8%; font-size: 1.1vw; }
     .toggleScreenOn           { width: 190px; height:155px; top: 22.2%; left: 35.2%; }
     .carousel-outer-controller{ width: 240px;  margin: 1.5rem 0 0 6rem; }
     .tvCarouselWrapper h2     { font-size: 3vw; }
     .questionWrapper          { margin : 4rem 0 0 2.5rem; h3 { font-size: 2.5vw;} }
-
+    .radioTxtOff              {  font-size: 1vw; }
+    .radioTxtOn               {  font-size: 1vw; }
+  
   } 
 }
 
@@ -309,15 +339,18 @@
 
 @media only screen and (min-width: 1680px) {
   @media only screen and ( min-height : 937px) {
-    .rightSign           {   grid-area: rightSign;      grid-row: 3 / 4; grid-column: 4 / 5; padding: 5rem 0 0 5rem;}
-    .leftSign            {   grid-area: leftSign;       grid-row: 3 / 4; padding: 5rem 15.5rem;}
+    .rightSign                {   grid-area: rightSign;      grid-row: 3 / 4; grid-column: 4 / 5; padding: 5rem 0 0 5rem;}
+    .leftSign                 {   grid-area: leftSign;       grid-row: 3 / 4; padding: 5rem 15.5rem;}
 
-    .radioButton              { padding: 7rem 0 0 32rem; font-size: 1vw;}
+    .radioButton              { padding: 1.8rem 0 0 32rem; font-size: 1vw;   outline: none;}
     .turnOnTvButton           { top : 42.5%; right: 38.9%; font-size: 1.1vw; }
     .toggleScreenOn           { width: 255px; height: 205px; top: -.5%; left: 35.4%; }
     .carousel-outer-controller{ width: 225px;  margin: 0rem 0 0 12rem; }
     .tvCarouselWrapper h2     { font-size: 2.5vw; }
     .questionWrapper          { margin : 8rem 0 0 2.5rem; h3 { font-size: 2vw;} }
 
+    .radioTxtOff              { font-size: 1.45vw; }
+    .radioTxtOn               { font-size: 1.45vw; }
+  
   } 
 }

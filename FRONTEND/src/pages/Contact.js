@@ -39,9 +39,13 @@ export class About extends Component {
             email : '',
             message : '',
             successMessage : '',
-            
+            errorMessage : '',
+            isSent : false,
+            isChecked : false,
           };
-    
+       
+
+      
     }
     componentDidMount() {
         this.updatePredicate();
@@ -60,28 +64,48 @@ export class About extends Component {
     changeHandler = (e) => {
         e.preventDefault();
         this.setState({[e.target.name] : e.target.value})
+      
+   
     }
+    
+    clickHandler = () =>  this.setState({ isChecked : !this.state.isChecked});
 
     //talking to the backend through axios
-    submitHandler = async (e) => {
+    submitHandler = (e) => {
         e.preventDefault()
-        const { email, name, message} = this.state
+        const { name,  email , message, isChecked } = this.state
 
-        if( email, name, message === '') {
-            this.setState({ successMessage : this.state.successMessage = 'complete the report ' })
-            setTimeout(() => this.setState({ successMessage : this.state.successMessage = ''}), 3000);
-            
+        switch (name, email, message, isChecked) {
+            case name,  email , message === '' && isChecked === false:
+                 this.setState({ successMessage : this.state.errorMessage = 'complete the report ' })
+                 setTimeout(() => this.setState({  isSent : false, errorMessage : this.state.errorMessage = ''}), 3000);
+                break;
 
-        } else {
-            await axios.post('/contact', {
-                name,
-                email,
-                message
-            });
+            case name,  email , message === '' && isChecked === true:
+                this.setState({ successMessage : this.state.errorMessage = 'complete the report ' })
+                setTimeout(() => this.setState({  isSent : false, errorMessage : this.state.errorMessage = ''}), 3000);
+                break;
+
+            case name,  email , message !== '' && isChecked === false:
+                this.setState({ successMessage : this.state.errorMessage = 'Checking if ROBOT ' })
+                setTimeout(() => this.setState({  isSent : false, errorMessage : this.state.errorMessage = ''}), 3000);
+                break;
+        
+            default:
+                axios.post('/contact', { name, email, message })
+                .then(res => {
+                    if( res.data.status === 'success' && isChecked === true ){          
+                    this.setState({ email : '' , name : '', message : '', isSent : true, isChecked : false, successMessage: 'Report Sent'}) 
+                    setTimeout(() =>  this.setState({successMessage: ''}), 3000);             
+                }   
+         
+            }).catch(err => {
+                return  console.log(`${err} comming from catch`)
+            })
+                break;
         }
-      
 
-    }
+        }
 
 
 
@@ -131,7 +155,6 @@ export class About extends Component {
                                                     <img src={react}     alt="react_logo" width="25%"/>
                                                     <img src={redux}     alt="redux_logo" width="20%"/>
                                                     <img src={node}      alt="nodejs_logo" width="20%"/>
-                                                    <img src={express}   alt="express_logo" width="15%"/>
                                                     <img src={mongodb}   alt="mongodb_logo" width="20%"/>
                                         
                                                 </div>     
@@ -153,7 +176,15 @@ export class About extends Component {
                                     duration={300} 
                                     title="REPORT"
                                 >
-                                {this.state.successMessage}
+                                { 
+                                    this.state.isSent && this.state.isChecked === false
+                                    ? 
+                                   <p style={{color : 'green'}}>{this.state.successMessage }</p> 
+                                    : 
+                                    <p style={{color : 'red'}}>{ this.state.errorMessage }</p>
+                                   
+                                }
+                            
                                 <form onSubmit={this.submitHandler}>
                                     <div style={{ display : 'flex', justifyContent : 'flexStart', alignItems : 'center'}} >
                                         <a href="https://github.com/Ultral1sk" style={{padding : '3rem 1rem 0 0rem'}}>
@@ -191,11 +222,29 @@ export class About extends Component {
                                                 name="message"
                                                 value={this.state.message}
                                                 placeholder="Contact / Comment" 
-                                                type="text">
+                                                >
                                             </textarea> 
-                                    </div>    
-                                    <br />
-                                    <button type="submit">Submit</button>
+                                    </div>
+                               
+                                        <span className="center" style={{marginTop : '2rem'}}>
+                                                <label className="label">
+                                                    <input  className="label__checkbox"    
+                                                            style={{backgroundColor : 'white'}}
+                                                            type="checkbox"
+                                                            name="isChecked"
+                                                            checked={this.state.isChecked}
+                                                            onClick={this.clickHandler}
+                                                            /> 
+                                                    <span className="label__text">
+                                                    <span className="label__check">
+                                                        <i className="fa fa-check icon"></i>
+                                                    </span>
+                                                    </span>
+                                                </label>                          
+                                            </span>              
+                                   
+                                        <button style={{marginTop : '2rem'}} type="submit">Submit</button>
+                                      
                                    
                                 </form>
                                
