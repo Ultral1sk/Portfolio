@@ -76,20 +76,24 @@ export class About extends Component {
         const { name,  email , message, isChecked } = this.state
 
         switch (name, email, message, isChecked) {
-            case name,  email , message === '' && isChecked === false:
+            case (name,  email , message === '' && isChecked === false)
+                :
                  this.setState({ successMessage : this.state.errorMessage = 'complete the report ' })
-                 setTimeout(() => this.setState({  isSent : false, errorMessage : this.state.errorMessage = ''}), 3000);
+                 setTimeout(() => this.setState({  isSent : false, isChecked : false, errorMessage : this.state.errorMessage = ''}), 3000);
+                break;
+                
+            case ( isChecked === false && name,  email , message !== ''  )
+                :
+                this.setState({ successMessage : this.state.errorMessage = 'Checking if ROBOT ' })
+                setTimeout(() => this.setState({  isSent : false, isChecked : false, errorMessage : this.state.errorMessage = ''}), 3000);
                 break;
 
-            case name,  email , message === '' && isChecked === true:
+            case (name,  email , message === '' && isChecked === true)
+                :
                 this.setState({ successMessage : this.state.errorMessage = 'Checking if ROBOT ' })
-                setTimeout(() => this.setState({  isSent : false, errorMessage : this.state.errorMessage = ''}), 3000);
+                setTimeout(() => this.setState({  isSent : false, isChecked : false, errorMessage : this.state.errorMessage = ''}), 3000);
                 break;
 
-            case name,  email , message !== '' && isChecked === false:
-                this.setState({ successMessage : this.state.errorMessage = 'Checking if ROBOT ' })
-                setTimeout(() => this.setState({  isSent : false, errorMessage : this.state.errorMessage = ''}), 3000);
-                break;
         
             default:
                 axios.post('/contact', { name, email, message })
@@ -98,9 +102,9 @@ export class About extends Component {
                     this.setState({ email : '' , name : '', message : '', isSent : true, isChecked : false, successMessage: 'Report Sent'}) 
                     setTimeout(() =>  this.setState({successMessage: ''}), 3000);             
                 }   
-         
+                
             }).catch(err => {
-                return  console.log(`${err} comming from catch`)
+                return  err
             })
                 break;
         }
@@ -112,7 +116,7 @@ export class About extends Component {
 
     render() {
         const isDesktop = this.state.isDesktop;
-        console.log(this.state)
+    
 
         return (
             <>
