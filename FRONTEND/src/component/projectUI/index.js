@@ -38,7 +38,8 @@ const ProjectIndex = () => {
                                 </Zoom>
                                 <Fade clear  delay={state ? 1000 : -1000} when={state ? true : false} >
                                     <div className="carousel-outer-controller" >
-                                            <Carousel slidesPerPage={1}  animationSpeed={1000} infinite={state ? true : false} autoPlay={state ? 3000 : 50000}  >
+                                       
+                                            <Carousel slidesPerPage={1}  animationSpeed={1000} infinite={state ? true : false} autoPlay={state ? 3000 : 50000}  >       
                                                 <ProjectTemplateItem size="2vw" to="www.hltv.org" padding="1.5rem 0 0 4rem" bck to="www.google.com">
                                                 {state ? 
                                                 <>
@@ -53,6 +54,7 @@ const ProjectIndex = () => {
                                                 
                                                 : null} 
                                                 </ProjectTemplateItem>
+                                                
                                                 <ProjectTemplateItem size="2vw" to="www.hltv.org" padding="1.5rem 0 0 4rem" bck to="www.google.com">
                                                 {state ? 
                                                 <>
@@ -82,7 +84,7 @@ const ProjectIndex = () => {
                             </div>    
 
                             <div className="rightSign" > 
-                                <Flash><MobileSignTag link="/contact" text="OUT!"/></Flash>
+                                <Flash><MobileSignTag link="/contact" text="RUN!"/></Flash>
                             </div>
                     </div>             
                 </div>

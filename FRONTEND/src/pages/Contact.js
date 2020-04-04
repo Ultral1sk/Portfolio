@@ -82,7 +82,7 @@ export class About extends Component {
                 break;
 
             case name,  email , message === '' && isChecked === true:
-                this.setState({ successMessage : this.state.errorMessage = 'complete the report ' })
+                this.setState({ successMessage : this.state.errorMessage = 'Checking if ROBOT ' })
                 setTimeout(() => this.setState({  isSent : false, errorMessage : this.state.errorMessage = ''}), 3000);
                 break;
 
@@ -146,16 +146,17 @@ export class About extends Component {
                                                 <div>
                                                     <img src={html}      alt="html_logo" width="20%"/>
                                                     <img src={css}       alt="css_logo" width="20%"/>
-                                                    <img src={bootstrap} alt="bootstrap" width="15%"/>
+                                                    <img src={bootstrap} alt="bootstrap" width="25%"/>
                                                     <img src={js}        alt="javascript_logo" width="20%" />
-                                                    <img src={jQuery}    alt="jquery_logo" width="20%"/>
+                                                  
 
                                                 </div>
                                                 <div>
                                                     <img src={react}     alt="react_logo" width="25%"/>
                                                     <img src={redux}     alt="redux_logo" width="20%"/>
+                                                    <img src={jQuery}    alt="jquery_logo" width="20%"/>
                                                     <img src={node}      alt="nodejs_logo" width="20%"/>
-                                                    <img src={mongodb}   alt="mongodb_logo" width="20%"/>
+                                                 
                                         
                                                 </div>     
                                            
