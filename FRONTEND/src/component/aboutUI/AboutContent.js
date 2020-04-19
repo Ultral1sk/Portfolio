@@ -26,7 +26,7 @@ const AboutContent = (props) => {
     backgroundRepeat: 'no-repeat', /* Do not repeat the image */
     backgroundSize: "cover",
     padding : props.padding,  
-
+   
    }
 
  
@@ -35,15 +35,9 @@ const AboutContent = (props) => {
       <Spin duration={300} count={2} >
         <Zoom duration={2000}>
           <div style={{...TypistWidth}}>
-            <div className="AboutContentStyles" style={{...TypistTextWidth}}>
-              <h2 className="about" style={{fontSize : '3vw', paddingTop: '2rem'}} >About</h2>
-                <p>Hi my name is 
-                  <span style={{...TypistStyles}}> Jovan. </span>
-                  i am a<span  style={{...TypistStyles}}> Husband, Developer, Teacher, Gamer </span> 
-                  with a big sense of<span style={{...TypistStyles}}> humor.</span> 
-                  </p>
-                insterested in the entire frontend and backend spectrum. Always eager to learn and work on
-                abitious projects with positive people.
+            <div className="AboutContentStyles">
+              <h2 className="about" style={{fontSize : '3vw', paddingTop: '2rem', color : '#1f1f1f', textShadow : '2px 2px 2px #f0f0f0'}}  >Contact</h2>
+              {props.children}
               </div>
           </div> 
         </Zoom>

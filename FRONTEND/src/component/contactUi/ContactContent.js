@@ -1,6 +1,7 @@
 import React from 'react';
 import Zoom                         from 'react-reveal/Zoom';
 import Spin                         from 'react-reveal/Spin';
+import { withRouter } from 'react-router-dom';
 
 
 
@@ -9,8 +10,8 @@ const ContactContent = (props) => {
 
 
    const ContactTypistWidth = {
-    display: 'flex',
-    justifyContent: 'start',
+ display: 'flex',
+    justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
     width: '100%',
@@ -19,7 +20,8 @@ const ContactContent = (props) => {
     backgroundPosition: 'center', /* Center the image */
     backgroundRepeat: 'no-repeat', /* Do not repeat the image */
     backgroundSize: "cover",
-    textAlign : 'center'
+    padding : props.padding,  
+    
    }
 
 
@@ -28,8 +30,7 @@ const ContactContent = (props) => {
         <Zoom duration={2000} delay={props.delay}>
           <div style={{...ContactTypistWidth}}>
             <div className="ContactContentStyles">
-              <h2 className="contact">{props.title}</h2>
-              <hr />
+              
                   {props.children}
               </div>
           </div> 

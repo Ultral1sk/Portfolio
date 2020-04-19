@@ -40,12 +40,12 @@ const ProjectIndex = () => {
                                     <div className="carousel-outer-controller" >
                                        
                                             <Carousel slidesPerPage={1}  animationSpeed={1000} infinite={state ? true : false} autoPlay={state ? 3000 : 50000}  >       
-                                                <ProjectTemplateItem size="2vw" to="www.hltv.org" padding="1.5rem 0 0 4rem" bck to="www.google.com">
+                                                <ProjectTemplateItem size="2vw" padding="1.5rem 0 0 4rem" bck >
                                                 {state ? 
                                                 <>
                                                 <div className="tvCarouselWrapper">
                                                 <h2 >NBA Project</h2>  
-                                                    <a  target="_blank" href="https://www.hltv.org/">
+                                                    <a  target="_blank" href="https://sport-1b2e0.firebaseapp.com/">
                                                         <button className="linkButton" />  
                                                     </a>    
                                                 </div>
@@ -55,12 +55,12 @@ const ProjectIndex = () => {
                                                 : null} 
                                                 </ProjectTemplateItem>
                                                 
-                                                <ProjectTemplateItem size="2vw" to="www.hltv.org" padding="1.5rem 0 0 4rem" bck to="www.google.com">
+                                                <ProjectTemplateItem size="2vw"  padding="1.5rem 0 0 4rem" bck >
                                                 {state ? 
                                                 <>
                                                 <div className="tvCarouselWrapper">
                                                 <h2 >Weather App</h2>  
-                                                    <a  target="_blank" href="https://www.hltv.org/">
+                                                    <a  target="_blank" href="https://sport-1b2e0.firebaseapp.com/">
                                                         <button className="linkButton" />  
                                                     </a>    
                                                 </div>

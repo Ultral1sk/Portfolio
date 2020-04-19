@@ -1,416 +1,356 @@
 // tablet and smaller monitors/laptops
-.contact_background_image {
-      display: flex;
-      font-family: 'Bangers', cursive !important;
-      background:  url('../../src/assets/backgroundImages/test1.png');
-      background-position:  bottom; /* Center the image */
-      background-repeat:  no-repeat; /* Do not repeat the image */
-      border : 15px solid black;
-      width: 100%;
-      height: 100vh;
-      margin: 0;
-      padding : 0;
-      font-family: 'Smokum', cursive;
-      color : rgb(31, 31, 31);
-      text-shadow: 2px 2px 2px  rgb(240, 240, 240);
-      
-  }
-
-
-  input {
-    :focus {
-        background: none ;
-    }
-  }
-     
-
-
-  
-  
-  @media only screen and (max-width: 375px) {
-      .contact_background_image { height: auto; background-size: cover; }
-     
-      
-      .gridContact {
-          margin: 0;
-          padding-left : 0.5rem;
-          display: grid;
-          grid-template-columns: 1fr;
-          grid-template-rows: 100px 1fr 1fr;
-          grid-gap: 5px;
-          grid-template-areas: 
-            'contact_sign_area contact_wanted_scroll_area contact_form_scroll_area'; 
-     
-        .contact_wanted_scroll_area {
-            grid-area: contact_scroll_area;
-            width: 100%;
-            grid-row: 2 / 3;
-            grid-column: 1 / 2;
-        }
+.about_background_image {
+    display: flex;
+    font-family: 'Bangers', cursive;
+    background:  url('../../src/assets/backgroundImages/test1.png');
+    background-position:  bottom; /* Center the image */
+    background-repeat:  no-repeat; /* Do not repeat the image */
+    border : 15px solid black;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding : 0;
+ 
     
-        .contact_form_scroll_area {
-            grid-area: contact_scroll_area;
-            width: 100%;
-            grid-row: 3 / 4;
-            grid-column: 1 / 2;
+}
+
+
+
+@media only screen and (max-width: 375px) {
+    .gridAbout {
+        margin: 0;
+        padding : 0;
+        display: grid;
+        grid-template-columns: 50px 1fr 100px;
+        grid-template-rows: 1fr 1fr;
   
-            .contact_scroll_area_text_wrapper {
-                text-align: center;
-                color: rgb(235, 235, 235) !important;
-                letter-spacing: 0.3rem;
-              }
-  
-            
-        }     
-        .contact_sign_area_home {
-            grid-area: contact_sign_area_home;
-            width: 100%;
-            grid-column: 1 / 2;
-            grid-row: 1 / 2;
-            display: block;
-            text-align: center;
-          
-           
-        }
-      }
-
-      .ContactContentStyles {
-            font-size: 6vw;
-            padding-top: 4rem;
-      }
-
-        .wanted_img_wrapper img { 
-            width: 30%;
-        }
-   
-        .contact { font-size: 20vw;}
-    
-  
-  }
-  @media only screen and (min-width: 375px) {
-      .contact_background_image     { height: auto; background-size: cover; }
-      
-      .gridContact                  { padding-left : 0.5rem;  
-      .contact_sign_area_home       { text-align: center;   }
-      }
-
-      .ContactContentStyles         { font-size: 6vw; padding-top: 4rem; width : 70%;}
-
-      .wanted_img_wrapper img       {  width: 20%;  }
-      
-      .contact                      { font-size: 13vw;}
-
-      .sign_img_wrapper div         { width: 35%;   }
-      .sign_img_wrapper             { display: flex; justify-content: center}
-      .contact_sign_area_home       
-      .icons_wrapper div            { width: 60%; }
-      .icons_wrapper {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-      }
-    
-  
-  }
-
-  @media only screen and (min-width: 478px) {
-      .contact_background_image     { height: auto; background-size: cover; }
-      
-      .gridContact                  { padding-left : 0.5rem;  
-      .contact_sign_area_home       { text-align: center;   }
-      }
-
-      .ContactContentStyles         { font-size: 7vw; padding-top: 4rem; }
-
-      .wanted_img_wrapper img       {  width: 25%;  }
-
-      .icons_wrapper div            { width: 70%; }
-      
-      .contact                      { font-size: 16vw;}
-
-      .icons_wrapper {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-      }
-    
-  
-  }
-
-  @media only screen and (min-width: 640px) {
-
-      .ContactContentStyles         { font-size: 5vw; padding-top: 4rem; width: 70%; }
-     
-
-  }
-
-  @media only screen and (min-width: 768px) {
-      .contact_background_image     { height: 100vh; background-size: cover; }
-      
-
-      .gridContact {
-            margin: 0;
-            padding : 0 0.2rem;
-            display: grid;
-            grid-gap: 20px;
-            
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 150px 1fr ;
-            grid-gap: 5px;
-            grid-template-areas: 
-              'contact_sign_area contact_wanted_scroll_area contact_form_scroll_area'; 
-       
-          .contact_wanted_scroll_area {
-              grid-area: contact_scroll_area;
-              width: 100%;
-              grid-row: 2 / 3;
-              grid-column: 1 / 3;
-          }
-      
-          .contact_form_scroll_area {
-              grid-area: contact_scroll_area;
-              width: 100%;
-              grid-row: 2 / 3;
-              grid-column: 3 / 5;
-    
-              .contact_scroll_area_text_wrapper {
-                  text-align: center;
-                  color: rgb(235, 235, 235) !important;
-                  letter-spacing: 0.3rem;
-                }
-    
-              
-          }     
-         
-          .contact_sign_area_home {
-              grid-area: contact_sign_area_home;
-              width: 100%;
-              grid-column: 2 / 4;
-              grid-row: 1 / 2;
-              display: block;
-              text-align: center;
+        grid-template-areas: 
+          'sign_area scroll_area scroll_area'
              
-          }
-        }
+        ; 
+        width: 100%;
+        height: 100%;
+      }
   
-        .ContactContentStyles         { font-size: 4vw; padding-top: 5rem; width : 70%;   }
-  
-        .wanted_img_wrapper img       { width: 35%; }
-      
-        .icons_wrapper div            { width: 120%; }
+      .scroll_area {
+          grid-area: scroll_area;
+          width: 100%;
+          grid-row: 1 / 3;
+          grid-column: 2 / 4;
 
-      
-      
-        .contact                      { font-size: 10vw;}
-  
-        .icons_wrapper {
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-        }
-  
-  }
-
-  @media only screen and (min-width: 992px) {
-      .contact_background_image     { height: 100vh; background-size: cover; }
-      
-
-      .gridContact {
-            margin: 0;
-            padding : 0;
-            display: grid;
-            grid-gap: 20px; 
-            grid-template-columns: 250px 1fr 1fr 20px 1fr 150px;
-            grid-template-rows: 50px 1fr ;
-            grid-gap: 5px;
-            grid-template-areas: 
-              'contact_sign_area contact_wanted_scroll_area contact_form_scroll_area'; 
-       
-          .contact_wanted_scroll_area {
-              grid-area: contact_scroll_area;
-              width: 100%;
-              grid-row: 2 / 3;
-              grid-column: 2 / 4;
-          }
-      
-          .contact_form_scroll_area {
-              grid-area: contact_scroll_area;
-              width: 100%;
-              grid-row: 2 / 3;
-              grid-column: 5 / 7;
-    
-              .contact_scroll_area_text_wrapper {
-                  text-align: center;
-                  color: rgb(235, 235, 235) !important;
-                  letter-spacing: 0.3rem;
-                }
-    
-              
-          }     
-        
-          .contact_sign_area_home {
-              grid-area: contact_sign_area_home;
-              width: 100%;
-              grid-column: 1 / 2;
-              grid-row: 2 / 3;
-              display: block;
+          .scroll_area_text_wrapper {
               text-align: center;
-              padding-top: 20rem;
-             a {
-                   font-size: 4vw;
-             }
+              color: rgb(0, 0, 0) !important;
+              letter-spacing: 0.3rem;
+              font-size: 3vw;
+            }
+
+          
+      }     
+      
+      .sign_area_home {
+          grid-area: sign_area_home;
+          width: 100%;
+          grid-column: 1 / 2;
+          grid-row: 2 / 3;
+          display: block;
+          text-align: end;
+         
+          .sign_img_wrapper div a img {
+              width: 50px;
           }
-        }
-  
-        .ContactContentStyles         { font-size: 3vw; padding-top: 5rem; width : 70%;   }
-  
-        .wanted_img_wrapper img       { width: 35%; }
-      
-        .icons_wrapper div            { width: 120%; }
-
+      }
    
       
-        .contact                      { font-size: 8vw;}
+
+}
+
+@media only screen and (min-width: 375px) {
+    .gridAbout {
+        margin: 0;
+        padding : 0;
+        display: grid;
+        grid-template-columns: 50px 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
   
-        .icons_wrapper {
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-        }
-
-
-
-  }
-
+        grid-template-areas: 
+          'sign_area_home scroll_area scroll_area'
+             
+        ; 
+        width: 100%;
+        height: 100%;
+      }
   
-  @media only screen and (min-width: 1200px) {
-      .contact_background_image       { height: 100vh; background-size: auto; }
- 
-        .ContactContentStyles         { font-size: 2.5vw; padding-top: 4.5rem; width : 70%;   }
-  
-        .wanted_img_wrapper img       { width: 35%; }
+      .scroll_area {
+          grid-area: scroll_area;
       
-        .icons_wrapper div            { width: 100%; }
+          grid-row: 1 / 3;
+            grid-column: 2 / 4;
 
+          .scroll_area_text_wrapper {
+            width: 65%;
+            margin: 0 auto;
+            padding-top: 3rem;
+            text-align: center;
+            color: rgb(252, 252, 252) !important;
+            font-size: 3vw;
+            letter-spacing: 0.2rem;
+            text-shadow: $mobile-text-shadow;
+            }
+
+          
+      }     
+      
+      .sign_area_home {
+          grid-area: sign_area_home;
+          width: 100%;
+          grid-column: 1 / 2;
+          grid-row: 2 / 3;
+          display: block;
+          text-align: end;
+      }
+      .sign_area_work {
+          grid-area: sign_area_work;
+          width: 100%;
+          grid-column: 1 / 2;
+          grid-row: 2 / 3;
+          display: block;
+        
+      }
+      .sign_img_wrapper a img {
+        width: 70%;
+  
+    }
+    .about { font-size: 10vw !important;}
+    .AboutContentStyles {
+      font-size: 3vw;
+    } 
+      
+    form div a img { width: 30px; height: 100%;}
+    button[type=submit] { font-size: 3.5vw;}
+     input {
+      height: 50%;
+      font-size: 4vw;
+      width: 100%;
+    }
+
+}
+
+@media only screen and (min-width: 414px) { 
+
+
+    @media only screen and (min-height: 937px) {
+      .sign_img_wrapper div a img {
+        width: 70px;
+    }
+  }
+}
+
+
+
+@media (min-width: 768px) {
     
+      .scroll_area {
+        grid-area: scroll_area;
+        grid-row: 1 / 3;
+        grid-column: 2 / 4;
+
+        .scroll_area_text_wrapper {
+        width: 48%;
+        margin: 0 auto;
+        padding-top: 3rem;
+        text-shadow: $main-text-shadow;
+        }   
+      }     
+       
+      .sign_img_wrapper {
+          width: 100%;
+          height: 100%;
+      }
+      .sign_img_wrapper a img {
+        width: 100%;
+  
+    }
+    .AboutContentStyles {
+      font-size: 2.1vw;
+      width: 90%;
+    } 
+    form div a img { width: 50px; height: 100%;}
+    form { width: 100%;}
+    button[type=submit] { text-align: center; padding : 1rem 0rem ;font-size: 2vw;}
+}
+
+@media only screen and (min-width: 1024px) {
+    .gridAbout {
       
-        .contact                      { font-size: 6vw;}
-  
-        .icons_wrapper {
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-        }
+        grid-template-columns: 250px 1fr 1fr 250px;
+        grid-template-rows: 1fr 60%;
+        grid-template-areas: 
+        'sign_area_home scroll_area scroll_area scroll_area scroll_area'
 
-
-  }
-
-   @media only screen and (min-width: 1400px) {
-      .contact_background_image       { height: 100vh; background-size: auto; }
-      .contact_sign_area_home         {  a {  font-size: 3vw !important;  }   }
+            
+      ; 
+      }
   
-        .ContactContentStyles         { font-size: 2.1vw; padding-top: 4.5rem; width : 70%;   }
-  
-        .wanted_img_wrapper img       { width: 30%; }
+      .scroll_area {
+          grid-area: scroll_area;
+          grid-row: 1 / 3;
+          grid-column: 2 / 5;
+
+          .scroll_area_text_wrapper {
+            width: 65%;
+            margin: 0 auto;
+            text-align: center;
+            color: rgb(235, 235, 235) !important;
+            text-shadow: $main-text-shadow;
+            font-size: 3vw;
+            letter-spacing: 0.1rem;
+            }         
+      }     
       
-        .icons_wrapper div            { width: 80%; }
-  
       
-        .contact                      { font-size: 6vw;}
-  
-        .icons_wrapper {
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-        }
+      
+      .sign_area_home         {   
+        grid-area: sign_area_home;
+        width: 100%;
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        padding-right: 0;
+      }
+      .about { font-size: 7vw !important;}
+      .AboutContentStyles {
+        font-size: 2.1vw;
+        width: 90%;
+      
+       
+      
+      } 
+      form div a img { width: 50px; height: 100%;}
+      form div  { padding: 0.5rem 0;}
+      button { padding : 0.5rem 0 !important; font-size: 1.5vw !important;}
 
+      @media only screen and (min-height: 1366px) { 
+        form div  { padding: 2rem 0;}
 
-  }
+      }
+}
 
-  @media only screen and (min-width: 1600px) {
-      .contact_background_image       { height: 100vh; background-size: auto; }
+@media only screen and (min-width: 1280px) {
 
-      .gridContact                    { grid-template-columns: 300px 1fr 1fr 20px 1fr 1fr 200px;  width: 100%;    }
-  
-      .ContactContentStyles           { text-shadow: contactPage; font-size: 2vw ; padding-top: 4rem; width : 70%;   }
+    .gridAbout {
+      display: grid;
+      grid-template-columns: 350px 1fr 1fr 1fr ;
+      grid-template-rows: 1fr 1fr;
 
-      .contact                        { font-size: 5vw ; }
-      .wanted_img_wrapper img         { width: 25%; }
+      grid-template-areas: 
+        'sign_area_home scroll_area scroll_area '
 
-  }
-
-  @media only screen and (min-width: 1900px) {
-    
-      .contact_sign_area_home       {  margin: 3.5rem 0 0 1rem; a {  font-size: 2.5vw !important; font-family: 'Bangers', cursive;   }    }
-  
-      .ContactContentStyles           { font-size: 1.8vw ; padding-top: 1rem; width : 70%;   }
-
-      .icons_wrapper div            { width: 90%; }
-
-   
-
-  }
-
-
-
-  form {
-      height: 45%;
+            
+      ; 
+      width: 100%;
+      height: 100%;
+    }
  
-    .input_styles {
-        text-align: start;
-        background-color: transparent;
-        border: none;
-        border-bottom: 0.5px dotted rgb(31, 31, 31);;
-        border-radius: 30%;
-        outline: none;
-        text-shadow: 2px 2px 2px  rgb(240, 240, 240);
-        margin-top: 3rem;
+    
+
+
+    .scroll_area {
+    
+        grid-area: scroll_area;
+        grid-row: 1 / 3;
+        grid-column: 1 /5;
+        text-shadow: $main-text-shadow;
+
+        .scroll_area_text_wrapper {
+            width: 30%;
+            margin: 0 auto;
+  
+          }
+          .about {
+            font-size : 5vw !important;
+          }
+        
+    }
+  
+    .sign_area_home {
+        grid-area: sign_area_home;
+        width: 100%;
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+     
+    }
+    form div { padding: 0.5rem !important;}
+    input { font-size: 2.5vw;}
+}
+  
+
+@media only screen and  (min-width: 1680px) {
+    .scroll_area_text_wrapper {
+        width: 40%;
+        margin: 0 auto;
+
+      }
+      .scroll_area .about { font-size: 3.2vw !important;}
+      .AboutContentStyles {
       
-    }
+        width: 70%;
+        height: 80%;
+            
+      } 
+      input { font-size: 1.5vw;}
+      form div a img { width: 50px; height: 100%;}
+      form div { padding: 0.5rem !important;}
+      button[type=submit] { text-align: center; padding : 0.5rem 0rem !important;font-size: 1rem !important; }
+      #textarea { font-size:1.5vw !important;}
+ }
+
+
+ form {
+  height: 50%;
+
+ 
+
+.input_styles {
+    text-align: start;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.5px dotted rgb(31, 31, 31);;
+    border-radius:  25%;
+    outline: none;
+    text-shadow: 2px 2px 2px  rgb(240, 240, 240);
+    margin-top: 3rem;
   
-    > button {
-        background-color: transparent;
-        border: none;
-        border-top: 0.5px double rgb(31, 31, 31);
-        border-bottom: 0.5px double rgb(31, 31, 31);
-        border-radius: 45%;
-        color: rgb(31, 31, 31);;
-        text-shadow: 2px 2px 2px  rgb(240, 240, 240);
-    }
-  
-    ::placeholder {
-      color: rgb(31, 31, 31);;
-      text-shadow: 2px 2px 2px  rgb(240, 240, 240);
-  }
-    textarea {
-      background-color: transparent;
-      border: none;
-      width: 70%;
-      border-bottom: 0.5px double rgb(31, 31, 31);;
-      border-bottom-left-radius: 50%;
-      border-bottom-right-radius: 50%;
-      outline: none;
-      margin-top: 3rem;
-      height: 75%;
-      text-shadow: 2px 2px 2px  rgb(240, 240, 240);
-    }
-  
-  }
+}
 
 
+> button {
+  width: 50px;
+    background-color: transparent;
+    border: none;
+    border-top: 0.5px double rgb(31, 31, 31);
+    border-bottom: 0.5px double rgb(31, 31, 31);
+    border-radius: 40%;
+    color: rgb(31, 31, 31);;
+    text-shadow: 2px 2px 2px  rgb(240, 240, 240);
+}
 
+::placeholder {
+  color: rgb(31, 31, 31);;
+  text-shadow: 2px 2px 2px  rgb(240, 240, 240);
+}
+textarea {
+  background-color: transparent;
+  border: none;
+  width: 70%;
+  border-bottom: 0.5px double rgb(31, 31, 31);;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  outline: none;
+  margin-top: 3rem;
+  height: 75%;
+  text-shadow: 2px 2px 2px  rgb(240, 240, 240);
+}
 
-
-
-
-
-
-
+}
 
 

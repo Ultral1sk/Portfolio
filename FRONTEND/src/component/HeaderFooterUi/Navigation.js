@@ -1,13 +1,18 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import jovan from '../../assets/ProjectPageAssets/joker1.png'
 import Wobble                from 'react-reveal/Wobble'
 import { Link } from 'react-router-dom'
 
 export const Navigation = () => {
 
+    const [state, setstate] = useState(true)
     
-        
+    useEffect(() => {
+        setTimeout(() => setstate(!true), 3000);
        
+    }, [])
+
+ 
     return (
         <div className="item">                                       
         <div className="previews">
@@ -25,7 +30,15 @@ export const Navigation = () => {
             </div>
             <div id="preview-greetings" className="preview-image">                                           
             <Wobble duration={3000}>
-                    <Link className="greetingsLink" to="https://www.hltv.org/">Hello</Link>                    
+                    <Link className="greetingsLink" to="https://www.hltv.org/">
+                        {
+                        state
+                            ? 
+                        <p className="timer"> HOVER</p> 
+                            : 
+                        'Hello' 
+                        }
+                    </Link>                    
             </Wobble>                                   
             </div>    
         </div>
