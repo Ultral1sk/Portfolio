@@ -23,6 +23,8 @@
   "homepage": "https://github.com/Ultral1sk/Portfolio#readme",
   "dependencies": {
     "axios": "^0.19.2",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "body-parser": "*",
     "concurrently": "^5.1.0",
     "dotenv": "^8.2.0",
