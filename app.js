@@ -3,7 +3,7 @@ const express     = require('express');
 const bodyParser  = require('body-parser');
 const nodemailer  = require('nodemailer')
 const app         = express();
-
+const PORT    = process.env.PORT || 3001
 // Body parser outter middleware of Express
 app.use(bodyParser.json());
 app.use(express.json());
@@ -56,5 +56,5 @@ app.post('/contact', ( req, res ) => {
 
 
 
-const PORT    = process.env.PORT || 3001
+if(process.env.NODE_ENV === 'production')
 app.listen(PORT, () => console.log(`Portfolio APP server is listening the ${PORT} port`));

@@ -88,7 +88,7 @@ export class About extends Component {
                                 <ContactContent 
                                     bck={scroll} 
                                     title='Wanted' 
-                                    duration={320}>
+                                    duration={300}>
                                     <div className="wanted_text_wrapper">
                                     <h2 className="headerAbout">WANTED</h2>
                                         <hr />
@@ -127,7 +127,7 @@ export class About extends Component {
                             <ContactContent 
                                     bck={scroll} 
                                     title='About' 
-                                    duration={350}
+                                    duration={300}
                                     delay={450}>
                                     <div className="aboutTextWrapper">
                                             <h2 className="headerAbout">About</h2>
