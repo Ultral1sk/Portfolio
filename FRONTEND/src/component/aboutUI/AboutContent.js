@@ -7,20 +7,13 @@ import Spin                         from 'react-reveal/Spin';
  
 const AboutContent = (props) => {
 
-  const TypistStyles = {
-    color: 'rgb(248, 79, 107)'
-   }
-
-  const TypistTextWidth = {
-     width : '70%'
-   }
    const TypistWidth = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
     width: '100%',
-    height: "80vh",
+    height: "83vh",
     background: `url(${props.bck})`,
     backgroundPosition: 'center', /* Center the image */
     backgroundRepeat: 'no-repeat', /* Do not repeat the image */

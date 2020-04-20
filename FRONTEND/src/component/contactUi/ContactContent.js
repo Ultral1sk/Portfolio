@@ -1,7 +1,6 @@
 import React from 'react';
 import Zoom                         from 'react-reveal/Zoom';
 import Spin                         from 'react-reveal/Spin';
-import { withRouter } from 'react-router-dom';
 
 
 
