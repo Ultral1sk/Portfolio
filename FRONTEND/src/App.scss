@@ -30,14 +30,14 @@
       
       i.icon {
         opacity: 0.2;
-        
+        text-shadow: none;
         color: transparent;
         transition: opacity .3s .1s ease;
         -webkit-text-stroke: 3px rgba(0,0,0,.5);
       }
       
       &:hover {
-        border: 5px solid rgba(0,0,0,0.2);
+        border: 5px solid rgba(143, 253, 0, 0.993);
       }
     }
     
