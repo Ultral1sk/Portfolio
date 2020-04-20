@@ -4,12 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "cd FRONTEND && npm run build",
-    "install-client": "cd FRONTEND && npm install",
-    "heroku-postbuild": "npm run install-client && npm run build",
     "start": "nodemon app.js",
     "FRONTEND": "cd FRONTEND && npm start",
-    "dev": "concurrently  \"nodemon app.js\" \"npm run FRONTEND"
+    "dev": "concurrently -n 'app,FRONTEND' -c 'red,green'  \"nodemon app.js\" \"npm run FRONTEND"
   },
   "repository": {
     "type": "git",

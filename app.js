@@ -9,6 +9,10 @@ app.use(bodyParser.json());
 app.use(express.json());
 app.use(express.urlencoded({extended : false}));
 
+if(process.env.NODE_ENV === 'production') {
+  app.use(express.static('FRONTEND/build'))
+}
+
 app.post('/contact', ( req, res ) => {
   console.log(req.body);
   
@@ -56,5 +60,5 @@ app.post('/contact', ( req, res ) => {
 
 
 
-if(process.env.NODE_ENV === 'production')
+
 app.listen(PORT, () => console.log(`Portfolio APP server is listening the ${PORT} port`));
