@@ -130,7 +130,7 @@ export class About extends Component {
                               <AboutContent 
                                 bck={scroll} 
                                 delay={2000} 
-                                duration={300} 
+                                duration={500} 
                                 title="REPORT"
                                 >
                                 { 

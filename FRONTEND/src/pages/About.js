@@ -128,7 +128,7 @@ export class About extends Component {
                                     bck={scroll} 
                                     title='About' 
                                     duration={300}
-                                    delay={450}>
+                                    delay={500}>
                                     <div className="aboutTextWrapper">
                                             <h2 className="headerAbout">About</h2>
                                                 <hr />
