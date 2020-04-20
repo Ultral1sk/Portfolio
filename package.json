@@ -5,8 +5,6 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
-    "FRONTEND": "npm start --prefix FRONTEND",
-    "dev": "concurrently \"nodemon app.js\" \"npm run FRONTEND\"",
     "build": "react-scripts build"
   },
   "repository": {
