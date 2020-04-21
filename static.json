@@ -1,5 +1,8 @@
 {
-      "root": "FRONTEND/build",
+      "root": "FRONTEND/build/",
+      "routes":{
+            "/**": "index.html"
+      },
       "canonical_host": "${HOST}",
       "logging": {
             "access": false,

@@ -37,5 +37,8 @@
     "nodemon": "*",
     "npm": "^6.14.1",
     "styled-components": "^5.1.0"
+  },
+  "devDependencies": {
+    "heroku": "^7.39.3"
   }
 }
