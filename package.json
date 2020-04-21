@@ -6,7 +6,7 @@
   "scripts": {
     "install": "cd FRONTEND && npm install",
     "build": "cd FRONTEND && npm run build",
-    "start": "nodemon app.js",
+    "start": "node app.js",
     "FRONTEND": "cd FRONTEND && npm start",
     "dev": "concurrently -n 'app,FRONTEND' -c 'red,green'  \"nodemon app.js\" \"npm run FRONTEND"
   },
