@@ -1,0 +1,13 @@
+{
+      "root": "FRONTEND/build",
+      "canonical_host": "${HOST}",
+      "logging": {
+            "access": false,
+            "error": "warn"
+          },
+          "proxies": {
+            "/api/": {
+              "origin": "https://jojodev.herokuapp.com/"
+            }
+      }
+    }

@@ -1,7 +1,7 @@
 import React, {useState}                     from 'react'
 import ProjectTemplateItem       from '../../component/projectUI/ProjectTemplateItem';
 import {MobileSignTag}           from '../../component/ReusableUi/SignTag'
-import Carousel                     from '@brainhubeu/react-carousel';
+import Carousel from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import Sound                     from './RadioSound'
 import Fade                      from 'react-reveal/Fade';

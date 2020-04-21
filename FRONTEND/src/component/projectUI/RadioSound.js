@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import {Howl, Howler } from 'howler'
+import {Howl } from 'howler'
 import theMan from '../../assets/ProjectPageAssets/Theman.mp3'
-import Tada                      from 'react-reveal/Tada';
+
 
 export const Sound = (props) => {
 
