@@ -3,11 +3,21 @@ const express     = require('express');
 const bodyParser  = require('body-parser');
 const nodemailer  = require('nodemailer')
 const app         = express();
-const PORT    = process.env.PORT || 3001
+const path        = require('path')
+const PORT        = process.env.PORT || 3001
+
 // Body parser outter middleware of Express
 app.use(bodyParser.json());
 app.use(express.json());
 app.use(express.urlencoded({extended : false}));
+
+app.get('/*', function( req, res) {
+  res.sendFile(path.join(__dirname, './FRONTEND/build'), function(err) {
+    if(err) {
+      res.status(500).send(err)
+    }
+  })
+})
 
 if(process.env.NODE_ENV === 'production') {
   app.use(express.static('FRONTEND/build'))
@@ -29,16 +39,19 @@ app.post('/contact', ( req, res ) => {
 
           let transporter = nodemailer.createTransport({
             service: 'gmail',
+            host: 'smtp.gmail.com',
             auth: {
+                api_key: process.env.ADMIN_EMAIL_API_KEY,
                 user: process.env.EMAIL,
                 pass: process.env.PASSWORD
             }
           });
 
           const mailOptions = {
-            from: `${req.body.name}`, // sender address
-            to: 'theservicethe@gmail.com', // list of receivers
-            subject: `Connection request from email: ${req.body.email}`, // Subject line
+            from: ` ${req.body.name}`, // sender address
+            to: `${req.body.email}`, // list of receivers
+            replyTo: `theservicethe@gmail.com`, // Subject line
+            subject : `Message from someone`,
             text: `${req.body.message}`,
             html: htmlEmail  // plain text body
           };
@@ -52,9 +65,6 @@ app.post('/contact', ( req, res ) => {
               res.json({status : `success`})
             });
     })      
-
-
-
       
 });
 
