@@ -56,9 +56,10 @@
   .radioTxtOff              { font-size: 3vw; }
   .radioTxtOn               { font-size: 3vw; }
 
-  @media only screen and ( device-height : 812px)  {
+  @media only screen and (device-width :  375px) and (device-height: 812px) and (-webkit-device-pixel-ratio : 3)  {
    
-    .radioButton              { padding: 2.3rem 1.3rem 0 0}
+    
+    .radioButton              { display: block; padding: 2.33rem 1.4rem 0 0;}
     .turnOnTvButton           { top : 45.3%; right: 17.7%; }
     .toggleScreenOn           { width: 132px; height:107px; position: absolute; top: 20%; left: 31.6%; border-radius: 17%; background-color: rgb(29, 29, 29);clip-path: polygon(50% 0%, 94% 0, 100% 45%, 100% 57%, 95% 98%, 50% 100%, 5% 98%, 0 55%, 0 41%, 6% 0);}
     .carousel-outer-controller{ width: 160px;  margin-left: 2rem; h2 { font-size: 7vw;} }

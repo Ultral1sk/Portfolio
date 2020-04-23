@@ -114,6 +114,10 @@
             justify-content: center;
             align-items: center;
       }
+      .aboutTextWrapper { color : white !important; letter-spacing: 2px; text-shadow: $mobile-text-shadow; font-size: 4.2vw;}
+  .headerAbout { font-size: 15vw;}
+
+  
       @media only screen and (min-height: 812px) {
 
         .ContactContentStyles         { text-align: center; font-size: 6.2vw; padding-top: 1rem !important; width : 70%;}
@@ -122,8 +126,7 @@
         .aboutTextWrapper {   font-size: 5.7vw !important;}
 
       }
-  .aboutTextWrapper { color : white !important; letter-spacing: 2px; text-shadow: $mobile-text-shadow; font-size: 4.2vw;}
-  .headerAbout { font-size: 15vw;}
+  
   }
 
   @media only screen and (min-width: 414px) { 
@@ -190,7 +193,9 @@
     .aboutTextWrapper { color : white !important; letter-spacing: 2px; text-shadow: $mobile-text-shadow; font-size: 4.2vw;}
     .headerAbout { font-size: 15vw;}
   
+  
   }
+
 
   @media only screen and (min-width: 478px) {
       .contact_background_image     { height: auto; background-size: cover; }
