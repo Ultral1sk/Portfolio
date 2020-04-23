@@ -16,7 +16,7 @@
 // mobile device media querry
 
 // tablet and smaller monitors/laptops
-@media (min-width: 325px) and (max-width: 414px) {
+@media (min-width: 375px) and (max-width: 414px) {
   .grid {
     display: grid;
     grid-template-columns: 1fr;
