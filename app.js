@@ -11,16 +11,11 @@ app.use(bodyParser.json());
 app.use(express.json());
 app.use(express.urlencoded({extended : false}));
 
-app.get('/*', function( req, res) {
-  res.sendFile(path.join(__dirname, './FRONTEND/build'), function(err) {
-    if(err) {
-      res.status(500).send(err)
-    }
-  })
-})
+app.get('/*', (req, res) => res.send('./FRONTEND/build/index.html'));
 
-if(process.env.NODE_ENV === 'production') {
-  app.use(express.static('FRONTEND/build'))
+
+if (process.env.NODE_ENV === 'production') {
+	app.use(express.static('FRONTEND/build'));
 }
 
 app.post('/contact', ( req, res ) => {
