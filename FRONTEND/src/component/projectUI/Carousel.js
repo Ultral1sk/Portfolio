@@ -1,9 +1,16 @@
-
+import React from 'react'
+import makeCarousel from 'react-reveal/makeCarousel';
+// we'll need the Slide component for sliding animations
+// but you can use any other effect
+import Fade from 'react-reveal/Fade';
+// we'll use styled components for this tutorial
+// but you can use any other styling options ( like plain old css )
+import styled, { css } from 'styled-components';
 
 const width = '300px', height='150px';
 const Container = styled.div`
-  border: 1px solid red;
-  position: relative;
+
+  position: absolute;
   overflow: hidden;
   width: ${width};
   height: ${height};
@@ -30,10 +37,16 @@ const CarouselUI = ({ position, handleClick, children }) => (
 );
 const Carousel = makeCarousel(CarouselUI);
 
-render (
-  <Carousel>
-    <Fade clear>
-            {props.children}
-    </Fade >
-  </Carousel>
-);
+
+const NewCarousel = (props) => {
+
+  return (
+    <Carousel>
+      <Fade clear>
+              {props.children}
+      </Fade >
+    </Carousel>
+  );
+}
+export default NewCarousel
+

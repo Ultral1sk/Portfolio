@@ -8,7 +8,7 @@ import Fade                      from 'react-reveal/Fade';
 import Tada                      from 'react-reveal/Tada';
 import Flash                     from 'react-reveal/Flash';
 import Zoom                      from 'react-reveal/Zoom';
-
+import NewCarousel from '../projectUI/Carousel'
 
 
 

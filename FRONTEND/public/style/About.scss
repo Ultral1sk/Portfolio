@@ -483,6 +483,24 @@
     .headerAbout { font-size: 7vw;}
   }
 
+
+  @media only screen and (min-height: 720px) {
+    .header { padding-top: 2rem; }
+    
+    .avatar_wrapper { padding: 0 0 2.2rem 13rem; }
+    .avatar_inner_wrapper .item #preview-greetings {
+      transform: translate(-60px, -240px);
+    }
+    .headerAbout { font-size: 5vw;  }
+    .aboutTextWrapper { font-size: 1.75vw !important; }
+
+    .wanted_img_wrapper img       { width: 25% !important; }
+    .icons_wrapper div            { width: 80% !important; }
+  }
+
+
+
+
   @media only screen and (min-width: 1366px) { 
     .icons_wrapper div            { width: 85% !important; }
     .wanted_img_wrapper img       { width: 23%; }
