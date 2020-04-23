@@ -15,9 +15,8 @@
 .timer {     color: rgb(248, 79, 107); text-shadow: $mobile-text-shadow; letter-spacing: 0.15rem;}
 // mobile device media querry
 
-
 // tablet and smaller monitors/laptops
-@media only screen and (max-width: 900px) {
+@media (min-width: 325px) and (max-width: 414px) {
   .grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -35,44 +34,21 @@
 
 
   //image width and movement controller 
-  .content{
-    text-align: center;
-    padding-top: 2rem;
-    img {
-      width: 40%;
-      height: 25vh;
+  .content{text-align: center;padding-top: 0rem;
+    img {  width: 40%;  height: 25vh;
     }  
   }
     
-    .item{
-      width: 100%;
-      height: auto;
-      position:relative;
-      cursor:pointer;
+    .item{  width: 100%;  height: auto;  position:relative;  cursor:pointer;
         
   
       .previews{
-        
-       display: flex;
-       justify-content: center;
-        flex-wrap: wrap;
-
-          .preview-image{
-            width:130px;
-            height:110px;
-            bottom:10px;
-            left: 47%;
-            opacity: 1;      
-            
-        }  
+        display: flex;justify-content: center;flex-wrap: wrap;
+        .preview-image{ width:130px; height:110px; bottom:10px; left: 47%;opacity: 1;      }  
       }  
   
         .previews a {  
-        
-          font-size: 1.3rem;
-          color: black;
-          font-family: 'Bangers', cursive;
-          text-shadow:   0px 2px 4px #212121,  
+         font-size: 1.3rem; color: black; font-family: 'Bangers', cursive; text-shadow:   0px 2px 4px #212121,  
 
         }
   
@@ -82,82 +58,100 @@
       // nav controller links
       #preview-home {
         background: url('../../src/assets/cartoonImages/about.png') center center no-repeat;
-        background-size: 120px auto;
-        
+        background-size: 120px auto;    
       }
       .homeLink {
         position: absolute;
         padding: 2.7rem 0 0 2rem;
       }
-  
       #preview-about {
         background: url('../../src/assets/cartoonImages/about.png') center center no-repeat;
-        background-size: 120px auto;
-        
-      }
-          
-      .aboutLink {
-        position: absolute;
-        padding: 2.7rem 0 0 2rem;
-      }
+        background-size: 120px auto;     
+      }      
+      .aboutLink { position: absolute; padding: 2.7rem 0 0 2rem;  }
   
       #preview-work {
         background: url('../../src/assets/cartoonImages/contact.png') center center no-repeat;
-        background-size: 120px auto;
-        
+        background-size: 120px auto;    
       }
           
       .workLink {
         position: absolute;
         padding: 2.5rem 0 0 2.5rem;
       }
-  
       #preview-contact {
         background: url('../../src/assets/cartoonImages/contact.png') center center no-repeat;
-        background-size: 120px auto;
-        
-      }
-          
+        background-size: 120px auto;    
+      }       
       .contactLink {
         position: absolute;
         padding: 2.5rem 0 0 2.6rem;
       }    
-  
       #preview-greetings {
         display: none;
         background: url('../../src/assets/cartoonImages/hey.png') center center no-repeat;
-        background-size: 180px auto;
-        
+        background-size: 180px auto;    
       }
     }
 
-    .hello_wrapper {
-      padding: 2rem;
-  
-      color: white;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      text-shadow:  $main-text-shadow;
-  
-      h2 {
-        font-size: 5vw !important;
-      }
+    .hello_wrapper { padding: 2rem; color: white; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-shadow:  $main-text-shadow;
+      h2 { font-size: 5vw !important;  }
     }
-  
-    .name_wrapper {
-      color: rgb(248, 79, 107);
-    }
-  
-  
-  
-    .name_wrapper {
-      color: rgb(248, 79, 107);
-    }
+    .name_wrapper { color: rgb(248, 79, 107); }
+}
 
+@media only screen and (min-width: 414px) { 
+  .content{ text-align: center; padding-top: 2rem; img {   width: 40%;   height: 25vh; }   }   
+    .item{ width: 100%; height: auto; position:relative; cursor:pointer;      
+      .previews{  display: flex; justify-content: center;  flex-wrap: wrap;
+      .preview-image{ width:130px; height:110px; bottom:10px; left: 47%; opacity: 1;              
+        }  
+      }  
+  
+      .previews a { font-size: 1.3rem; color: black; font-family: 'Bangers', cursive; text-shadow:   0px 2px 4px #212121,      }
+      .avatar_wrapper{ padding: 0 !important;}
+      // nav cartoon background images
+      // nav controller links
+      #preview-home { background: url('../../src/assets/cartoonImages/about.png') center center no-repeat; background-size: 120px auto;       }
+      .homeLink { position: absolute; padding: 2.7rem 0 0 2rem; }
+      #preview-about { background: url('../../src/assets/cartoonImages/about.png') center center no-repeat; background-size: 120px auto;   }     
+      .aboutLink { position: absolute; padding: 2.7rem 0 0 2rem;  }
+      #preview-work { background: url('../../src/assets/cartoonImages/contact.png') center center no-repeat; background-size: 120px auto;  }     
+      .workLink {position: absolute;padding: 2.5rem 0 0 2.5rem;  }
+      #preview-contact { background: url('../../src/assets/cartoonImages/contact.png') center center no-repeat; background-size: 120px auto;      }        
+      .contactLink { position: absolute; padding: 2.5rem 0 0 2.6rem;  }    
+  
+      #preview-greetings { display: none; background: url('../../src/assets/cartoonImages/hey.png') center center no-repeat; background-size: 180px auto; }}
+        .hello_wrapper {padding: 2rem; color: white;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;text-shadow:  $main-text-shadow;
+      h2 { font-size: 5vw !important; }}
+  
+      .name_wrapper { color: rgb(248, 79, 107); }
+      .sidebar { display : none;}
+
+      @media only screen and (min-height: 906px) { 
+        .avatar_inner_wrapper {padding-top: 7.8rem;  }
+      }
+
+    @media only screen 
+    and (device-width : 414px) 
+    and (device-height : 896px) 
+    and (-webkit-device-pixel-ratio : 2) {
+      .avatar_inner_wrapper {padding-top: 7.4rem;  }
+     }
 
 }
 
+@media only screen and (min-width: 768px) { 
 
+
+  @media only screen and (min-height: 903px) { 
+    .avatar_inner_wrapper {padding-top: 12rem; }}
+  @media only screen and (min-height: 1024px) { 
+    .avatar_inner_wrapper { padding-top: 16rem;}}
+
+    .avatar_inner_wrapper { padding-top: 16rem; } 
+
+ }
 // tablet laptop small desktop display
 @media only screen and (min-width: 1024px) {
 
@@ -168,41 +162,17 @@
     grid-template-areas: 
     'title title title'
     'header header sidebar'
-
     ;
     width: 100%;
+  }
 
+
+  .title {  grid-area: title; }
+  .header {  grid-area: header; padding-top: 8.7rem; }
+  .sidebar { display : block; grid-area: sidebar;  display: block;  text-align: end;}
  
-  }
-
-
-  .title {
-    grid-area: title;
-  
-  }
-  .header {
-  
-    grid-area: header;
-    padding-top: 8rem;
-    
-  }
-  .sidebar {
-  
-    grid-area: sidebar;
-    display: block;
-    text-align: end;
-    
-  }
- 
-
-  .avatar_wrapper{
-  width: 100%;
-  display: flex;
-  align-items: flex-end;
-  position:relative;
-  
-}
-
+  .avatar_wrapper{ width: 100%; display: flex; align-items: flex-end; position:relative;}
+  .hello_wrapper {padding: 2rem; color: white;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;text-shadow:  $main-text-shadow;}
 
 @function randomNum($min, $max) {
   $rand: random();
@@ -212,56 +182,20 @@
   /* e.g. font-size: #{randomNum(5, 10)}px; */
 }
 
+  
 
 // img and nav controller wrapper 
-.avatar_inner_wrapper{
-  display:flex;
-  justify-content:space-between;
-  padding-top: 6%;
-  align-items: center;
-  height:100%;
-  
-
-
-  
-  .item{
-    width: 100%;
-    height: auto;
-    position:relative;
-    cursor:pointer;
+.avatar_inner_wrapper{ display:flex; justify-content:space-between; padding-top: 1.8%; align-items: center; height:100%;
+   
+  .item{width: 100%;height: auto;position:relative;cursor:pointer;
 
     //avatar image wrapper
-    .content{
-      width:100%;
-      display:flex;
-      justify-content: center;
-      transform:rotate(0) scale(1.31);
-      transition:all .2s cubic-bezier(.28,.05,.65,.97);
+    .content{  width:100%;  display:flex;  justify-content: center;  transform:rotate(0) scale(1.31);  transition:all .2s cubic-bezier(.28,.05,.65,.97);
 
-    }
-    
-    .previews{
-      
-      bottom:0;
-      left:50%;
-      z-index:-1;
-      
-      
-      &:nth-child(2){
-        .preview-image{
-          right:0;
-        }
-      }
-      
-      .preview-image{
-        width:160px;
-        height:110px;
-        transition:all .2s cubic-bezier(.28,.05,.65,.97);
-        position:absolute;
-        bottom:10px;
-        left: 47%;
-        opacity: 0;      
-        
+    }  
+    .previews{  bottom:0;   left:50%;   z-index:-1;  &:nth-child(2){
+      .preview-image{ right:0; }} 
+      .preview-image{ width:160px; height:110px; transition:all .2s cubic-bezier(.28,.05,.65,.97); position:absolute; bottom:10px; left: 47%; opacity: 0;           
       } 
     }
     
@@ -269,24 +203,15 @@
       z-index:5;
       
       .content{
-
-        transform:rotate(0) scale(1.1);
-        animation:shake .4s 1;
-        animation-delay:.4s;
-        transition:all .3s cubic-bezier(.28,.05,.65,.97);
+        transform:rotate(0) scale(1.1); animation:shake .4s 1; animation-delay:.4s; transition:all .3s cubic-bezier(.28,.05,.65,.97);
     
-        &:after{
-          width:0;
-          transition:all .3s cubic-bezier(.28,.05,.65,.97);
+        &:after{width:0;transition:all .3s cubic-bezier(.28,.05,.65,.97);
         }   
       }
 
       .previews{
-    
-        .preview-image{
-          transition:all .2s cubic-bezier(.28,.05,.65,.97);
-          opacity: 1;
-          z-index:5;
+       .preview-image{
+          transition:all .2s cubic-bezier(.28,.05,.65,.97); opacity: 1;  z-index:5;
 
           &:nth-child(1){
             transform:rotate(#{randomNum(-10, 10)}deg) translate(-260px, -170px);
@@ -307,11 +232,7 @@
         
         } 
       }
-      .previews a {  
-        font-size: 1.3rem;
-        color: black;
-        font-family: 'Bangers', cursive;
-        text-shadow:   0px 2px 4px #212121,  
+      .previews a {  font-size: 1.3rem;color: black;font-family: 'Bangers', cursive;text-shadow:   0px 2px 4px #212121; 
         }
 
     }
@@ -321,20 +242,16 @@
     // nav controller links
     #preview-home {
       background: url('../../src/assets/cartoonImages/about.png') center center no-repeat;
-      background-size: 140px auto;
-      
+      background-size: 140px auto;      
     }
     .homeLink {
       position: absolute;
       padding: 2.7rem 0 0 3rem;
     }
-
     #preview-about {
       background: url('../../src/assets/cartoonImages/about.png') center center no-repeat;
-      background-size: 140px auto;
-      
-    }
-        
+      background-size: 140px auto;   
+    }      
     .aboutLink {
       position: absolute;
       padding: 2.7rem 0 0 2.7rem;
@@ -342,31 +259,25 @@
 
     #preview-work {
       background: url('../../src/assets/cartoonImages/contact.png') center center no-repeat;
-      background-size: 120px auto;
-      
-    }
-        
+      background-size: 120px auto;      
+    }       
     .workLink {
-      position: absolute;
-      padding: 2.5rem 0 0 3.7rem;
+      position: absolute;  padding: 2.5rem 0 0 3.7rem;
     }
-
     #preview-contact {
       background: url('../../src/assets/cartoonImages/contact.png') center center no-repeat;
-      background-size: 120px auto;
-      
-    }
-        
+      background-size: 120px auto;   
+    }      
     .contactLink {
       position: absolute;
       padding: 2.5rem 0 0 3.7rem;
-    }
-      
+    }  
     #preview-greetings {
       background: url('../../src/assets/cartoonImages/hey.png') center center no-repeat;
       background-size: 180px auto;
       opacity: 1;
       transform: translate(-60px, -340px);
+      display: block
     }
     .greetingsLink {
       position: absolute;
@@ -376,8 +287,7 @@
       text-shadow:   0px 2px 4px #212121;
       font-size: 1.2vw;
 
-    }
-      
+    }    
     @keyframes shake{
       0%{ transform:rotate(3deg) scale(1.1) }
       20%{ transform:rotate(-3deg) scale(1.1) }
@@ -388,22 +298,14 @@
     }
   }
 }
-  .hello_wrapper {
-    padding: 5rem;
-
-    color: white;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-shadow:  $main-text-shadow;
-
+  .hello_wrapper { padding: 5rem; color: white; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-shadow:  $main-text-shadow;
   }
 
-  .name_wrapper {
-    color: rgb(248, 79, 107);
-  }
+  .name_wrapper {   color: rgb(248, 79, 107); }
 
-
-
+  @media only screen and (min-height: 1366px) { 
+    .header {   padding-top: 1.7rem; }  
+   }
 
 }
 
@@ -424,41 +326,37 @@
 
  
   }
+  .hello_wrapper {
+    padding: 2rem;
 
-  .title {
-    grid-area: title;
-  
-  }
-  .header {
-    grid-area: header;
-  
-    
-  }
-  .sidebar {
-  
-    grid-area: sidebar;
-    display: block;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow:  $main-text-shadow;
 
-  }
-  .avatar_wrapper {
-    padding: 0 0 4.2rem 13rem;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .content{
-    width:100%;
-    display:flex;
-    justify-content: center;
-    transform:rotate(0) scale(1.11);
-    transition:all .2s cubic-bezier(.28,.05,.65,.97);
-
-    img {
-      width: 28%;
+    h2 {
+      font-size: 3vw !important;
     }
   }
 
+  .title { grid-area: title; }
+  .header { grid-area: header;
+  .sidebar { grid-area: sidebar;  display: block; }
+  .avatar_wrapper {padding: 0 0 4.2rem 13rem; display: flex; justify-content: center; }
+  
+  .content{ width:100%; display:flex; justify-content: center; transform:rotate(0) scale(1.11); transition:all .2s cubic-bezier(.28,.05,.65,.97);
+
+    img { width: 28%; }
+  }
 
 }
+}
 
+@media only screen and (min-width: 1366px) {
+  .hello_wrapper {
+    h2 {
+      font-size: 2vw !important;
+    }
+  }
 
+}
