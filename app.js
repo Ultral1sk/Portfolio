@@ -33,9 +33,10 @@ app.post('/contact', ( req, res ) => {
               <ul>
                   <li>Name : ${req.body.name}</li>
                   <li>Email : ${req.body.email}</li>
-              </ul>
+           
                   <h3>Message<h3>
                   <p>${req.body.message}</p>
+              </ul>
           `
 
           let transporter = nodemailer.createTransport({
@@ -50,10 +51,10 @@ app.post('/contact', ( req, res ) => {
           });
 
           const mailOptions = {
-            from: ` ${req.body.name}`, // sender address
-            to: `${req.body.email}`, // list of receivers
-            replyTo: `theservicethe@gmail.com`, // Subject line
-            subject : `Message from someone`,
+            name: ` ${req.body.name}`, // sender address
+            from: ` ${req.body.email}`, // sender address
+            to: `theservicethe@gmail.com`, // list of receivers
+            subject : `Contact request `,
             text: `${req.body.message}`,
             html: htmlEmail  // plain text body
           };
