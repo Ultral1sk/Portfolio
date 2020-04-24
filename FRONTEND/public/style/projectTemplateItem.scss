@@ -406,9 +406,10 @@
     .turnOnTvButton           { top : 41.5%; right: 39.15%; font-size: 1.1vw; }
     .toggleScreenOn           { width: 255px; height: 205px; top: -.5%; left: 35.4%; }
     .carousel-outer-controller{ width: 225px;  margin: 0rem 0 0 12rem; }
-    .tvCarouselWrapper h2     { font-size: 2.5vw; }
-    .questionWrapper          { margin : 8rem 0 0 2.5rem; h3 { font-size: 2vw;} }
+    .tvCarouselWrapper h2     { font-size: 2.5vw; padding: 0 !important; }
+    .questionWrapper          { margin : 3rem 0 0 2.5rem !important; h3 { font-size: 2vw;} }
     .linkButton               { width: 50px; height: 50px; margin-bottom: 2.5rem; }
+    .projectMiddle            { padding-top: 0rem;   }
 
     .radioTxtOff              { font-size: 1.45vw; }
     .radioTxtOn               { font-size: 1.45vw; }
