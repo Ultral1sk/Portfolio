@@ -52,7 +52,7 @@ export class About extends Component {
       }
 
     hoverHandler = () => {
-        console.log('hoverme')
+    
         this.setState(state => ({
             onHover : !state.onHover
         }))

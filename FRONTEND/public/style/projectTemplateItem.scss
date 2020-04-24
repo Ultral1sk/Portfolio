@@ -398,6 +398,8 @@
 }
 
 @media only screen and (min-width: 1680px) {
+  
+  
   @media only screen and ( min-height : 937px) {
     .rightSign                {   grid-area: rightSign;      grid-row: 3 / 4; grid-column: 4 / 5; padding: 5rem 0 0 5rem;}
     .leftSign                 {   grid-area: leftSign;       grid-row: 3 / 4; padding: 5rem 15.5rem;}
@@ -407,7 +409,7 @@
     .toggleScreenOn           { width: 255px; height: 205px; top: -.5%; left: 35.4%; }
     .carousel-outer-controller{ width: 225px;  margin: 0rem 0 0 12rem; }
     .tvCarouselWrapper h2     { font-size: 2.5vw; padding: 0 !important; }
-    .questionWrapper          { margin : 3rem 0 0 2.5rem !important; h3 { font-size: 2vw;} }
+    .questionWrapper          { margin : 3rem 0 0 2rem !important; h3 { font-size: 2vw;} }
     .linkButton               { width: 50px; height: 50px; margin-bottom: 2.5rem; }
     .projectMiddle            { padding-top: 0rem;   }
 

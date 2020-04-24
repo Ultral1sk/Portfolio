@@ -1,4 +1,4 @@
-require('dotenv').config()
+
 const express     = require('express');
 const bodyParser  = require('body-parser');
 const nodemailer  = require('nodemailer')
@@ -20,7 +20,7 @@ app.get('*',(req, res) => {
 });
 
 app.post('/contact', ( req, res ) => {
-  console.log(req.body);
+
   
     nodemailer.createTestAccount((err , account) => {
           const  htmlEmail = `
@@ -57,7 +57,7 @@ app.post('/contact', ( req, res ) => {
             if(err)
               console.log(err)
             else
-              console.log(info);
+             
               res.json({status : `success`})
             });
     })      
