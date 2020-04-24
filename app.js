@@ -1,11 +1,16 @@
-
+require('dotenv').config()
 const express     = require('express');
 const bodyParser  = require('body-parser');
 const nodemailer  = require('nodemailer')
 const app         = express();
 const path        = require('path')
 const PORT        = process.env.PORT || 3001
+const aws = require('aws-sdk');
 
+let s3 = new aws.S3({
+  accessKeyId: process.env.S3_KEY,
+  secretAccessKey: process.env.S3_SECRET
+});
 // Body parser outter middleware of Express
 app.use(bodyParser.json());
 app.use(express.json());
@@ -20,7 +25,7 @@ app.get('*',(req, res) => {
 });
 
 app.post('/contact', ( req, res ) => {
-
+  console.log(req.body);
   
     nodemailer.createTestAccount((err , account) => {
           const  htmlEmail = `
@@ -36,6 +41,7 @@ app.post('/contact', ( req, res ) => {
           let transporter = nodemailer.createTransport({
             service: 'gmail',
             host: 'smtp.gmail.com',
+            port: 465,
             auth: {
                 api_key: process.env.ADMIN_EMAIL_API_KEY,
                 user: process.env.EMAIL,
@@ -57,7 +63,7 @@ app.post('/contact', ( req, res ) => {
             if(err)
               console.log(err)
             else
-             
+              console.log(info);
               res.json({status : `success`})
             });
     })      
