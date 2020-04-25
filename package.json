@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "engines": {
-    "node": "12.16.2"
+    "node": "12.16.x"
   },
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "heroku-postbuild": "cd FRONTEND && npm install && npm run build"
+   
   },
   "author": "",
   "license": "ISC",

@@ -7,8 +7,6 @@ const cors        = require('cors');
 
 const PORT        = process.env.PORT || 3001
 
-
-
 // Body parser outter middleware of Express
 app.use(bodyParser.json());
 app.use(express.json());
