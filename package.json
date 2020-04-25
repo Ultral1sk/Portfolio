@@ -12,7 +12,7 @@
     "install-frontend": "cd frontend && npm install",
     "heroku-postbuild": "npm run install-frontend && npm run build",
     "start": "node app.js",
-    "frontend": "npm start",
+    "frontend": "cd frontend && npm start",
     "dev": "concurrently -n 'app,frontend' -c 'red,green'  \"nodemon app.js\" \"npm run frontend"
   },
   "author": "",
@@ -25,8 +25,11 @@
     "dotenv": "^8.2.0",
     "express": "*",
     "install": "^0.13.0",
+    "nodemailer": "^2.7.2",
     "nodemon": "*",
     "npm": "^6.14.1",
-    "styled-components": "^5.1.0"
+    "sendgrid": "^5.2.3",
+    "styled-components": "^5.1.0",
+    "xoauth2": "^1.2.0"
   }
 }

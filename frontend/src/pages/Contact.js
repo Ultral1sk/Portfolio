@@ -83,9 +83,9 @@ export class About extends Component {
             default:
                 axios.post('/contact', { name, email, message })
                 .then(res => {
-             
-                    if( res.data.status === 'success' && isChecked === true ){          
-                    this.setState({ email : '' , name : '', message : '', isSent : true, isChecked : false, successMessage: 'Report Sent'}) 
+                    console.log(res)
+                    if( res.status === 200 && isChecked === true ){          
+                    this.setState({ email : '' , name : '', message : '', isSent : true, isChecked : false, successMessage: 'Message Sent'}) 
                     setTimeout(() =>  this.setState({successMessage: ''}), 3000);             
                 }   
                 
@@ -96,10 +96,6 @@ export class About extends Component {
         }
 
         }
-
-
-
-    
 
 
     render() {
