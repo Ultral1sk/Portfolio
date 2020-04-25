@@ -1,18 +1,18 @@
 {
-  "name": "project",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "",
+  "main": "app.js",
   "engines": {
     "node": "12.16.x"
   },
-  "main": "app.js",
   "scripts": {
-    "build": "cd frontend && npm run build",
-    "install-frontend": "cd frontend && npm install",
-    "heroku-postbuild": "npm run install-frontend && npm run build",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
     "start": "node app.js",
-    "frontend": "cd frontend && npm start",
-    "dev": "concurrently -n 'app,frontend' -c 'red,green'  \"nodemon app.js\" \"npm run frontend"
+    "client": "cd client && npm start",
+    "dev": "concurrently -n 'app,client' -c 'red,green'  \"nodemon app.js\" \"npm run client"
   },
   "author": "",
   "license": "ISC",
