@@ -8,12 +8,12 @@
   },
   "scripts": {
     "test": "echo \"Error : o test specified\" && exit 1",
-    "build": "cd client && npm run build",
-    "install-client": "cd client && npm install",
-    "heroku-postbuild": "npm run install-client && npm run build",
+    "build": "cd frontend && npm run build",
+    "install-frontend": "cd frontend && npm install",
+    "heroku-postbuild": "npm run install-frontend && npm run build",
     "start": "node app.js",
-    "client": "cd client && npm start",
-    "dev": "concurrently -n 'app,client' -c 'red,green'  \"nodemon app.js\" \"npm run client"
+    "frontend": "cd frontend && npm start",
+    "dev": "concurrently -n 'app,frontend' -c 'red,green'  \"nodemon app.js\" \"npm run frontend"
   },
   "author": "",
   "license": "ISC",
