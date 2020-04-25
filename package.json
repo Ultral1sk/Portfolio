@@ -4,30 +4,13 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "install": "cd FRONTEND && npm install",
-    "build": "cd FRONTEND && npm run build",
     "start": "node app.js",
-    "FRONTEND": "cd FRONTEND && npm start",
-    "dev": "concurrently -n 'app,FRONTEND' -c 'red,green'  \"nodemon app.js\" \"npm run FRONTEND"
-  },
-  "engines": {
-    "node": "12.16.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Ultral1sk/Portfolio.git"
+    "heroku-postbuild": "cd FRONTEND && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Ultral1sk/Portfolio/issues"
-  },
-  "homepage": "https://github.com/Ultral1sk/Portfolio#readme",
   "dependencies": {
-    "@sendgrid/mail": "^7.0.1",
     "axios": "^0.19.2",
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
     "body-parser": "*",
     "concurrently": "^5.1.0",
     "cors": "^2.8.5",
@@ -38,7 +21,8 @@
     "npm": "^6.14.1",
     "styled-components": "^5.1.0"
   },
-  "optDependencies": {
-    "heroku": "^7.39.3"
+   "engines": {
+    "node": "12.16.2"
   }
+ 
 }

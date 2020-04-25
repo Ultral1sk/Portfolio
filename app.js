@@ -18,10 +18,12 @@ app.use(cors());
 if(process.env.NODE_ENV === 'production'){
   //set static folder
   app.use(express.static('FRONTEND/build'));
+
+  app.get('*',(req, res) => {
+    res.sendFile(path.join(__dirname, 'FRONTEND', 'build', 'index.html'));
+  });
+  
 }
-app.get('*',(req, res) => {
-  res.sendFile(path.resolve(__dirname, 'FRONTEND', 'build', 'index.html'));
-});
 
 
 
