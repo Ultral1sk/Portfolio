@@ -7,9 +7,12 @@
   },
   "main": "app.js",
   "scripts": {
-    "start": "app.js",
-    "heroku-postbuild": "cd FRONTEND && npm install && npm run build"
-   
+    "build": "cd frontend && npm run build",
+    "install-frontend": "cd frontend && npm install",
+    "heroku-postbuild": "npm run install-frontend && npm run build",
+    "start": "node app.js",
+    "frontend": "cd frontend && npm start",
+    "dev": "concurrently -n 'app,frontend' -c 'red,green'  \"nodemon app.js\" \"npm run frontend"
   },
   "author": "",
   "license": "ISC",
