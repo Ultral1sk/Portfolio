@@ -1,6 +1,5 @@
 import React, { Component }       from 'react'
 import Flash                      from 'react-reveal/Flash';
-
 import signLeft                   from '../assets/cartoonImages/signLeft.png'
 import signArrowLeft              from '../assets/cartoonImages/arrowLeft.png'
 import AboutContent               from '../component/aboutUI/AboutContent'
@@ -83,7 +82,7 @@ export class About extends Component {
             default:
                 axios.post('/contact', { name, email, message })
                 .then(res => {
-                    console.log(res)
+              
                     if( res.status === 200 && isChecked === true ){          
                     this.setState({ email : '' , name : '', message : '', isSent : true, isChecked : false, successMessage: 'Message Sent'}) 
                     setTimeout(() =>  this.setState({successMessage: ''}), 3000);             

@@ -27,7 +27,16 @@ if(process.env.NODE_ENV === 'production'){
 
 
 app.post('/contact', (req, res) => {
-  console.log('asd')
+  const output = `
+  <p>You have a new contact request</p>
+  <h3>Contact Details</h3>
+  <ul>
+    <li>Name: ${req.body.name}</li> 
+    <li>Email: ${req.body.email}</li>
+  </ul>
+  <h3>Message</h3>
+  <p>${req.body.message}</p>
+  `;
   let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -39,9 +48,10 @@ app.post('/contact', (req, res) => {
   var mailOptions = {
       name : req.body.name,
       from : req.body.email,
-      to : `theservicethe@gmail.com`,
+      to :   `theservicethe@gmail.com`,
       subject : 'nodemailer test',
-      text : req.body.message
+      text : req.body.message,
+      html : output
   }
   
   transporter.sendMail(mailOptions, function ( err, res ) {
@@ -49,7 +59,7 @@ app.post('/contact', (req, res) => {
       console.log(`Error`, err);
   
     } else{
-      console.log(`email snt`, res)
+      console.log(`email snt`)
     }
   })
   res.json({status:'sent'});

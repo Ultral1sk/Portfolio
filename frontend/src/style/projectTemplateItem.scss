@@ -309,8 +309,8 @@
   .projectMiddle       {   grid-area: projectMiddle;  grid-row: 2 / 3; grid-column: 3 / 4; position: relative; }
  
   @media only screen and ( min-height : 720px) {
-    .radioButton              { padding: 0rem 0 0  19.4rem; font-size: 1vw;}
-    .toggleScreenOn           { width: 168px; height:138px; top: 28.5%; left: 35.2%; }
+    .radioButton              { padding: 5rem 0 0  10rem; font-size: 1vw;}
+    .toggleScreenOn           { width: 168px; height:138px; top: 28.5%; left: 35%; }
     .turnOnTvButton           { top : 41.5%; right: 38.9%; font-size: 1.1vw; }
     .questionWrapper h3       { margin-top : 0rem;  font-size: 2vw;  width: 250px; }
     .questionWrapper          { padding-top : 5.5rem;  margin-left: 0 !important; }
