@@ -13,6 +13,7 @@ import './App.scss'
 
 
 function App() {
+    console.log(`bitch is loggin from app js FRONTEND`)
   return <div className="App">  
             <Switch>
                 <Route exact path='/'         component={Home} />             
