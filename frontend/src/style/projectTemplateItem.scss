@@ -33,7 +33,7 @@ time { width : 100%}
   }
   /* what the freaking hell */
   .leftSign            {   grid-area: leftSign; grid-row: 3 / 4; padding-top: 3rem;}
-  .rightSign           {   grid-area: rightSign; grid-row: 3 / 4; grid-column: 3 / 4; padding-top: 3rem;}
+  .rightSign           {   font-weight: bolder; grid-area: rightSign; grid-row: 3 / 4; grid-column: 3 / 4; padding-top: 3rem; text-decoration: underline; }
   .tvButton            {   grid-area: tvButton; grid-column: 2 / 3; grid-row: 2 / 3;   outline: none;}
   .radioButton         {   grid-area: radioButton; grid-column:  1 / 2; grid-row: 2 / 3; padding: 3.6rem 0 0 0.5rem;   outline: none;}
   .projectMiddle       {   grid-area: projectMiddle; grid-row: 2 / 3; grid-column: 2 / 3; position: relative; }
