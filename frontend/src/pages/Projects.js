@@ -5,7 +5,7 @@ import ProjectIndex from '../component/projectUI/index'
 const Projects = (props) => (
 
 
-      <div className="myWorkBackgroundImage">    
+      <div >    
 
             <ProjectIndex />
             
