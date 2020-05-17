@@ -29,7 +29,7 @@ const ProjectIndex = () => {
             </div>
             <Slide bottom delay={400}>
             <div id="projectBox" className="bottomLeft">
-                <a href="https://github.com/Ultral1sk/weatherAPI" target="_blank">WeatherApp   </a>
+                <a href="https://joweatherapp.netlify.app/" target="_blank">WeatherApp   </a>
             </div>
             </Slide>
             </div>
