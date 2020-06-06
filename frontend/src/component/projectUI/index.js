@@ -39,7 +39,7 @@ const ProjectIndex = () => {
             <div style={{width: '100%'}}>
             <Slide top delay={800}>
                 <div id="projectBox" className="topRight">
-                    <a href="https://github.com/Ultral1sk/CheckoutCard" target="_blank"> CheckoutCard </a>
+                    <a href="https://checkoutcardtest.netlify.app" target="_blank"> CheckoutCard </a>
                
                </div>
                </Slide>
