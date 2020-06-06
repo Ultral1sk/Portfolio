@@ -52,7 +52,7 @@ const ProjectIndex = () => {
                 </div>
                 <Slide bottom delay={1000}>
                 <div id="projectBox" className="bottomRight">
-                <a href="https://github.com/Ultral1sk/gameShop" target="_blank"> 
+                <a href="https://github.com/Ultral1sk/gameShopFrontEnd" target="_blank"> 
                      Final Project <br /> Loading...</a>
                     
                 </div>
