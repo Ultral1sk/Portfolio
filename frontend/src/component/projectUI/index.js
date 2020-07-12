@@ -1,9 +1,7 @@
 import React, {useState}         from 'react'
 import {Link }                   from 'react-router-dom'
 import Slide from 'react-reveal/Slide';
-
-
-import Sound from './Sound'
+import arrow from '../../assets/ProjectPageAssets/arrow.png'
 
 
 const ProjectIndex = () => {
@@ -24,7 +22,8 @@ const ProjectIndex = () => {
           </Slide>
             <div className="centerLeft">
                 <Link to="about">
-                   <Sound />
+                <img src={arrow} alt="back" />
+              
                 </Link>
             </div>
             <Slide bottom delay={400}>
@@ -45,8 +44,7 @@ const ProjectIndex = () => {
                </Slide>
                <div className="centerRight">
                 <Link to="contact">
-                    <Sound />
-                
+                <img src={arrow} alt="forward" />
                  
                 </Link>
                 </div>

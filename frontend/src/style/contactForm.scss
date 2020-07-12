@@ -2,12 +2,8 @@
 .about_background_image {
     display: flex;
     font-family: 'Bangers', cursive;
-    background:  url('../../src/assets/backgroundImages/test1.png');
-    background-position:  bottom; /* Center the image */
-    background-repeat:  no-repeat; /* Do not repeat the image */
-    border : 15px solid black;
-    width: 100%;
-    height: 100vh;
+ 
+
     margin: 0;
     padding : 0;
  
@@ -148,7 +144,7 @@
 
 
 
-@media (min-width: 768px) {
+@media  (min-width: 768px)   {
     
       .scroll_area {
         grid-area: scroll_area;
@@ -234,6 +230,8 @@
 
       }
 }
+
+
 
 @media only screen and (min-width: 1280px) {
 
