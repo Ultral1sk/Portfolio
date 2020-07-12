@@ -1,12 +1,8 @@
 // tablet and smaller monitors/laptops
 .about_background_image {
-    display: flex;
-    font-family: 'Bangers', cursive;
- 
 
-    margin: 0;
-    padding : 0;
- 
+    font-family: 'Bangers', cursive;
+
     
 }
 
@@ -144,7 +140,7 @@
 
 
 
-@media  (min-width: 768px)   {
+@media  (min-width: 768px) and (max-width: 1023px)  {
     
       .scroll_area {
         grid-area: scroll_area;
@@ -174,9 +170,30 @@
     form div a img { width: 50px; height: 100%;}
     form { width: 100%;}
     button[type=submit] { text-align: center; padding : 1rem 0rem ;font-size: 2vw;}
+
+    @media only screen and  (min-height: 720px) { 
+      .about {
+        font-size: 8vw !important;
+        padding-top : 1.5rem !important;
+      }
+      .AboutContentStyles {
+      
+        width: 80%;
+        height: 80%;
+            
+      } 
+      .sign_img_wrapper div a img {
+        width: 50px !important;
+    }
+      input { font-size: 1.5vw;}
+      form div a img { width: 40px !important; height: 100%;}
+      form div { padding: 0.15rem !important;}
+      button[type=submit] { text-align: center; padding : 0.5rem 0rem !important;font-size: 1rem !important; }
+      #textarea { font-size:1.5vw !important;}
+    }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
     .gridAbout {
       
         grid-template-columns: 250px 1fr 1fr 250px;
@@ -225,10 +242,31 @@
       form div  { padding: 0.5rem 0;}
       button { padding : 0.5rem 0 !important; font-size: 1.5vw !important;}
 
+      @media only screen and  (min-height: 720px) { 
+        .about {
+          padding : 0 !important;
+        }
+        .AboutContentStyles {
+        
+          width: 60%;
+          height: 80%;
+              
+        } 
+        input { font-size: 1.5vw;}
+        form div a img { width: 40px !important; height: 100%;}
+        form div { padding: 0.15rem !important;}
+        button[type=submit] { text-align: center; padding : 0.5rem 0rem !important;font-size: 1rem !important; }
+        #textarea { font-size:1.5vw !important;}
+      }
+
+
+
       @media only screen and (min-height: 1366px) { 
         form div  { padding: 2rem 0;}
 
       }
+
+
 }
 
 
@@ -250,7 +288,9 @@
     }
  
     
-
+    .sign_img_wrapper  {
+      height: 100% ;
+   }
 
     .scroll_area {
     
@@ -281,13 +321,22 @@
     input { font-size: 2.5vw;}
 
     @media only screen and  (min-height: 720px) { 
+      .about {
+        padding : 0 !important;
+      }
       .AboutContentStyles {
       
-        width: 100%;
-        height: 95%;
+       
+        height: 80%;
             
       } 
+      input { font-size: 1.5vw;}
+      form div a img { width: 40px !important; height: 100%;}
+      form div { padding: 0.15rem !important;}
+      button[type=submit] { text-align: center; padding : 0.5rem 0rem !important;font-size: 1rem !important; }
+      #textarea { font-size:1.5vw !important;}
     }
+
 
 }
   
@@ -298,7 +347,14 @@
         margin: 0 auto;
 
       }
-      .scroll_area .about { font-size: 3.2vw !important;}
+      .sign_img_wrapper  {
+       height: 100% ;
+    }
+      
+      .scroll_area .about { 
+        font-size: 3.6vw !important;
+        padding-top: 1rem !important;
+      }
       .AboutContentStyles {
       
         width: 70%;
@@ -306,7 +362,7 @@
             
       } 
       input { font-size: 1.5vw;}
-      form div a img { width: 50px; height: 100%;}
+      form div a img { width: 60px !important; height: 100%;}
       form div { padding: 0.5rem !important;}
       button[type=submit] { text-align: center; padding : 0.5rem 0rem !important;font-size: 1rem !important; }
       #textarea { font-size:1.5vw !important;}

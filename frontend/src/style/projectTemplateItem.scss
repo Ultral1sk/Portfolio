@@ -47,10 +47,10 @@
   .myWorkInnerWrapper a {font-size: 6vw !important; }
   .topLeft     { border: 15px solid black; border-bottom: 5px; border-radius:0 0  250px 250px ; }
   .bottomLeft  { border : 15px solid black;padding-left: 2rem;border-radius:  250px 250px 0  0; }
-  .centerLeft  { position: relative; img { position: absolute; left:  20px; width: 120px; height: 120px; top: -60px; transform: rotate(195deg); }}
+  .centerLeft  { position: relative; img { position: absolute; left:  20px; width: 120px !important; height: 120px; top: -60px; transform: rotate(195deg); }}
   .topRight    { border: 15px solid black; border-bottom: 5px; border-radius: 0  0   250px  250px ; }
   .bottomRight { border: 15px solid black; padding-top: 1rem; border-radius:  250px 250px   0  0  ; }
-  .centerRight { position: relative; width: 100%; img { position: absolute; width: 120px; height: 120px; right: 20px; top: -50px;  }}
+  .centerRight { position: relative; width: 100%; img { position: absolute; width: 120px !important; height:120px; right: 20px; top: -50px;  }}
   .myProjects  { position: absolute; top: 47%;  }
  
 

@@ -93,7 +93,7 @@
       .contact                      { font-size: 4vw;}
 
       .sign_img_wrapper div         { width: 35%;   }
-      .sign_img_wrapper             { display: flex; justify-content: center}
+      .sign_img_wrapper             { display: flex; justify-content: center; height: 100%;}
       .contact_sign_area_home       
       .icons_wrapper div            { width: 60%; }
       .icons_wrapper {
@@ -226,6 +226,20 @@
 
          }
 
+         @media only screen and (min-height: 720px) {
+
+            .ContactContentStyles         { font-size: 2vw !important; padding-top: 4.8rem; width : 70%;   }
+  
+            .wanted_img_wrapper img       { width: 25%; }
+          
+            .icons_wrapper div            { width: 70%; }
+            .aboutTextWrapper {   font-size:2vw !important;}
+            .headerAbout { font-size: 5.5vw;}
+            .sign_img_wrapper div         { width: 45%;   }
+
+            
+         }
+
   }
 
   @media only screen and (min-width: 1024px) and (max-width: 1279px) {
@@ -303,6 +317,20 @@
               justify-content: center;
               align-items: center;
         }
+        @media only screen and (min-height: 720px) {
+
+            .ContactContentStyles         { font-size: 2vw !important; padding-top: 4.8rem; width : 70%;   }
+  
+            .wanted_img_wrapper img       { width: 20% !important; }
+            .icons_wrapper img            { width: 25% !important; }
+          
+            .icons_wrapper div            { width: 70%; }
+            .aboutTextWrapper {   font-size:2vw !important;}
+            .headerAbout { font-size: 5.5vw;}
+            .sign_img_wrapper div         { width: 45%;   }
+
+            
+         }
 
         @media only screen and (min-height: 937px) {
 
@@ -407,6 +435,7 @@
   
   @media only screen and (min-height: 720px) {
     .header { padding-top: 2rem; }
+    .icons_wrapper img            { width: 25% !important; }
     
   
     .headerAbout { font-size: 5vw;  }
@@ -459,8 +488,10 @@
   @media only screen and (min-width: 1680px) {
     
   
-      .ContactContentStyles           { font-size: 1.5vw ; padding-top: 1rem; width : 70%;   }
-      .icons_wrapper div            { width: 70% !important; }
+      .ContactContentStyles           { font-size: 1.5vw ; padding-top: 1rem; width : 60%;   }
+      .icons_wrapper div            { width: 60% !important; }
+      .icons_wrapper img            { width: 25% !important; }
+
       .wanted_img_wrapper img         { width: 25% !important; }
       .aboutTextWrapper {  font-size: 1.5vw !important;}
 
