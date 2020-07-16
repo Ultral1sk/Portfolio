@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import signRight            from '../../src/assets/cartoonImages/signRight.png'
 import { SignTag }          from '../component/ReusableUi/SignTag'
 import Flash                from 'react-reveal'
-import { Navigation, Title} from '../component/HeaderFooterUi/Navigation'
+import { Navigation, HomePageContent} from '../component/HeaderFooterUi/Navigation'
 
 
 export class Home extends Component {
@@ -14,7 +14,22 @@ export class Home extends Component {
         
         return (
             <>
-                <div className="profilePicture">
+
+<div >
+                  <HomePageContent />
+              
+                            <div className="avatar_wrapper">
+                                <div className="avatar_inner_wrapper">
+                                <Navigation />     
+                                </div>     
+                            </div>
+                
+             
+                  {/* <HomePageAvatarAndNavbar /> */}
+            </div>
+
+            {/* new part */}
+                {/* <div className="profilePicture">
                     <div className="grid">
                             <Title />
                      
@@ -33,7 +48,7 @@ export class Home extends Component {
                             </SignTag>
                         </div>            
                     </div>        
-                </div>
+                </div> */}
             </>
         );
     }
