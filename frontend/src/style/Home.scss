@@ -119,6 +119,10 @@
 }
     position: absolute;
     padding: 5.5rem 0;
+    @include breakpoint(biggerLaptop) { 
+      padding: 2.5rem 0;
+      left: 90px;
+    }
 @include breakpoint(desktop) { 
   padding: 5rem 0;
 
@@ -136,7 +140,10 @@
       display: inline-block;
       width: 300px;
       height: 350px;
-  
+      @include breakpoint(biggerLaptop) { 
+        width: 200px;
+        height: 250px;
+      }
     
   }
 }
@@ -185,7 +192,7 @@
                  
            }
            @include breakpoint(biggerLaptop) { 
-            width: 300px;
+            width: 150px;
                    
              }
              @include breakpoint(desktop) { 
@@ -454,7 +461,13 @@
     opacity: 1;
     transform: translate(-60px, -340px);
     display: none;
-    @include breakpoint(biggerLaptop) { display: block; }
+    @include breakpoint(biggerLaptop) { 
+      display: block;
+      background-size: 120px auto;
+      transform: translate(-60px, -240px);
+    
+    
+    }
     @include breakpoint(desktop) { 
       display: block;
      transform: translate(-60px, -400px);
@@ -470,7 +483,7 @@
   }
   .greetingsLink {
     position: absolute;
-    padding: 2.1rem 0 0 3.5rem;
+    padding: 2.5rem 0 0 4rem;
     color: black;
     font-family: 'Bangers', cursive;
     text-shadow:   0px 2px 4px #212121;
