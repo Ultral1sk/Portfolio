@@ -48,7 +48,7 @@ app.post('/contact', (req, res) => {
   var mailOptions = {
       name : req.body.name,
       from : req.body.email,
-      to :   `theservicethe@gmail.com`,
+      to :   `zealotservice@gmail.com`,
       subject : 'nodemailer test',
       text : req.body.message,
       html : output
